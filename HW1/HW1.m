@@ -36,7 +36,8 @@ E0 = A .* (b*ones(1,3));
 E = sum(sum(E0),2)
 
 % F
-F = A(2,:)
+F0 = [A(1,:);A(3,:)]
+F = [F0(:,1), F0(:,2)]
 
 % Solve linear equatuons
 x = inv(A)*b
