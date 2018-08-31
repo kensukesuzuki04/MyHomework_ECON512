@@ -1,10 +1,7 @@
-
 % ECON512 Homework 1 
 % Kensuke Suzuki
-
 clear all
 %% Problem 1
-
 X = [1,1.5,3,4,5,7,9,10];
 Y1 = -2 + .5*X;
 Y2 = -2 + 0.5 * X.^2;
@@ -22,7 +19,6 @@ X = linspace(-10,20,200)';
 sumX = sum(X)
 
 %% Problem 3
-
 A = [2,4,6; 1,7,5; 3,12,4]
 b = [-2;3;10]
 
@@ -43,7 +39,6 @@ F = [F0(:,1), F0(:,2)]
 x = inv(A)*b
 
 %% Problem 4
-
 % block diagonal matrix
 B =  blkdiag(A,A,A,A,A);
 
@@ -65,22 +60,21 @@ end
 disp(A)
 
 %% Problem 6
+clear X
+clear Y
 
 filename = 'datahw1.csv';
 data = csvread(filename);
-indp = [ones(4392,1), data(:,3), data(:,4), data(:,6)];
-dpn = data(:,5);
+X = [ones(4392,1), data(:,3), data(:,4), data(:,6)];
+Y = data(:,5);
 
 % Pointe estimates
-betahat = inv(indp'*indp)*indp'*dpn
+betahat = inv(X'*X)*X'*Y
 
 % Standard error
 % residual
-e = dpn - (indp * betahat);
-sigmahat = (e'* e)/(size(indp,1)-size(indp,2));
-cov = sigmahat * inv(indp'*indp);
+e = Y - (X * betahat);
+sigmahat = (e'* e)/(size(X,1)-size(X,2));
+cov = sigmahat * inv(X'*X);
 var = diag(cov);
 stderr = var.^(1/2)
-
-
-
