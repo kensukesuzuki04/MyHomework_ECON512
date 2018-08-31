@@ -15,4 +15,10 @@ xlabel('X') % x-axis label
 ylabel('Y1 and Y2') % y-axis label
 legend('Y1 = -2 + .5X','Y2 = -2 + .5X^2')
 
-%%
+%% Problem 2
+% Create 200x1 vector X 
+clear X
+X = linspace(-10,20,200)';
+sumX = sum(X)
+
+%% Problem 3
