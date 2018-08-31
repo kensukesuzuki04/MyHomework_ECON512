@@ -402,7 +402,7 @@ For matrix algebra, I use ``\code{*}'' for matrix multiplication, use ``\code{`}
 \vect{D} = \left[\begin{array}{r} -3.2505\\ 0.3961\\ 0.8037 \end{array}\right]
 \end{align*}
 
-To obtain ${E} =\sum_i \sum_j a_{ij} b_{i}$, I first calculate $\vect{E0} = \vect{A} \circ \prn{\vect{b}\bmat{1,1,1}}$ where $\circ$ is element-wise multiplication. Then I sum all elements in \vect{E0} by running \code{sum( )} twice, for summing over each column first and then for summing over raw.
+To obtain ${E} =\sum_i \sum_j a_{ij} b_{i}$, I first calculate $\vect{E0} = \vect{A} \circ \prn{\vect{b}\bmat{1,1,1}}$ where $\circ$ is element-wise multiplication. Then I sum all elements in \vect{E0} by running \code{sum( )} twice, for summing over each column first and then for summing over raw next.
 \begin{align*}
 &\vect{E0} = \left[\begin{array}{rrr} -4.0 & -8.0 & -12.0\\ 3.0 & 21.0 & 15.0\\ 30.0 & 120.0 & 40.0 \end{array}\right]\\
 \Rightarrow &E = 205
@@ -421,14 +421,14 @@ In solving the system of linear equation $\vect{A}\vect{x} = \vect{b}$ for $\vec
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 4}
-I use \code{blkdiag(A,A,A,A,A)} to create a $15\times15$ block diagonal matrix. 
+I use \code{blkdiag(A,A,A,A,A)} to create a $15\times15$ block diagonal matrix. See the attached code.
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 5}
 
-In creating a matrix of random draws from a normal distribution with mean 10 and standard deviation 5, we use \code{normrnd(10,5,[5,3])}. For example
+In creating a matrix of random draws from a normal distribution with mean 10 and standard deviation 5, we use \code{normrnd(10,5,[5,3])}. For example, this command returns
 \begin{align*}
-\vect{A} - \left[\begin{array}{rrr} 6.96 & 9.6 & 12.2\\ 6.31 & 14.5 & 10.5\\ 1.25 & 10.9 & 23.9\\ 14.6 & 11.5 & 4.17\\ 14.3 & 10.6 & 0.729 \end{array}\right]
+\vect{A} = \left[\begin{array}{rrr} 6.96 & 9.6 & 12.2\\ 6.31 & 14.5 & 10.5\\ 1.25 & 10.9 & 23.9\\ 14.6 & 11.5 & 4.17\\ 14.3 & 10.6 & 0.729 \end{array}\right]
 \end{align*}
 
 Then using loop, we check if each element of $\vect{A}$ is smaller than 10 or not. If it is smaller than 10, replace it with 0 and replace it with 1 otherwise. This yields
@@ -442,7 +442,7 @@ Then using loop, we check if each element of $\vect{A}$ is smaller than 10 or no
 
 First we make $N\times 1$ vector of dependent variable (\vect{Y}), which is the 5th column of the dataset, where $N$ is the number of observation. We then creat $N\times 4$ matrix of independent variables (\vect{X}),  whose 1st column is ones, 2nd, 3rd and 4th columns are vectors of export dummy, R\&D dummy, and capital stock, respectively. 
 
-By definition of OLS estimates, vector of coefficients $\hat{\vect{\beta}}=\bmat{\hat{\beta}_0,\hat{\beta}_1,\hat{\beta}_2,\hat{\beta}_3}$ can be computed by
+By definition of OLS estimates, vector of coefficient estimates $\hat{\vect{\beta}}=\bmat{\hat{\beta}_0,\hat{\beta}_1,\hat{\beta}_2,\hat{\beta}_3}'$ can be computed by
 
 \begin{align*}
 \hat{\vect{\beta}} =\prn{\vect{X}'\vect{X}}^{-1}\vect{X}'\vect{Y} = \left[\begin{array}{r} 0.082\\ 0.120\\ 0.140\\ 0.030 \end{array}\right]
