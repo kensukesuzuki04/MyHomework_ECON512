@@ -63,4 +63,23 @@ end
 
 disp(A)
 
+%% Problem 6
+
+filename = 'datahw1.csv';
+data = csvread(filename);
+indp = [ones(4392,1), data(:,3), data(:,4), data(:,6)];
+dpn = data(:,5);
+
+% Pointe estimates
+betahat = inv(indp'*indp)*indp'*dpn
+
+% Standard error
+% residual
+e = dpn - (indp * betahat);
+sigmahat = (e'* e)/(size(indp,1)-size(indp,2));
+cov = sigmahat * inv(indp'*indp);
+var = diag(cov);
+stderr = var.^(1/2)
+
+
 
