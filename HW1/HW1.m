@@ -43,3 +43,24 @@ x = inv(A)*b
 
 %% Problem 4
 
+% block diagonal matrix
+B =  blkdiag(A,A,A,A,A);
+
+%% Problem 5
+clear A
+
+A = normrnd(10,5,[5,3])
+
+for i = 1:size(A,1)
+    for j = 1:size(A,2)
+        if A(i,j) < 10
+            A(i,j) = 0;
+        else
+            A(i,j) = 1;
+        end
+    end
+end
+
+disp(A)
+
+
