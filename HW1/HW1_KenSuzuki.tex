@@ -375,11 +375,11 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 1}
-Define $\vect{X} = \bmat{1,1.5,3,4,5,7,9,10}$ and construct the values of the function $Y1=-2*.5X$ and $Y2 = -2 + .5X^2$. We have
+Define $\vect{X} = \bmat{1,1.5,3,4,5,7,9,10}$ and construct the values of the function $Y1=-2*.5X$ and $Y2 = -2 + .5X^2$. I have
 
 \begin{align*}
-\vect{Y1} = \left[\begin{array}{cccccccc} -\frac{3}{2} & -\frac{5}{4} & -\frac{1}{2} & 0 & \frac{1}{2} & \frac{3}{2} & \frac{5}{2} & 3 \end{array}\right]\\
-\vect{Y2} = \left[\begin{array}{cccccccc} -\frac{3}{2} & -\frac{7}{8} & \frac{5}{2} & 6 & \frac{21}{2} & \frac{45}{2} & \frac{77}{2} & 48 \end{array}\right]
+\vect{Y1} = \left[\begin{array}{cccccccc} -1.5 & -1.25 & -0.5 & 0 & 0.5 & 1.5 & 2.5 & 3.0 \end{array}\right]\\
+\vect{Y2} = \left[\begin{array}{cccccccc} -1.5 & -0.875 & 2.5 & 6.0 & 10.5 & 22.5 & 38.5 & 48.0 \end{array}\right]
 \end{align*}
 
 Plot $Y1$ and $Y2$ against $X$ in a single graph
@@ -389,10 +389,36 @@ Plot $Y1$ and $Y2$ against $X$ in a single graph
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%
-\section{Problem 2}
-We use \code{linspace} command to create a vector containing evenly-spaced numbers between $[-10,20]$. See the attached code.
+\section*{Problem 2}
+I use \code{linspace} command to create a vector containing evenly-spaced numbers between $[-10,20]$. Fir summing elements of the vector, I use \code{sum( )} command. See the attached code.
 
 
+%%%%%%%%%%%%%%%%%%%%%%
+\section*{Problem 3}
+
+For matrix algebra, I use ``\code{*}'' for matrix multiplication, use ``\code{`}'' for transpose, and use ``\code{inv( )}'' for getting inverse. 
+\begin{align*}
+\vect{C} = \vect{A}'\vect{b} = \left[\begin{array}{c} 29.0\\ 133.0\\ 43.0 \end{array}\right]\\
+\vect{D} = \left[\begin{array}{c} -3.25\\ 0.396\\ 0.804 \end{array}\right]
+\end{align*}
+
+To obtain ${E} =\sum_i \sum_j a_{ij} b_{i}$, I first calculate $\vect{E0} = \vect{A} \circ \prn{\vect{b}\bmat{1,1,1}}$ where $\circ$ is element-wise multiplication. Then I sum all elements in \vect{E0} by running \code{sum( )} twice, for summing over each column first and then for summing over raw.
+\begin{align*}
+&\vect{E0} = \left[\begin{array}{ccc} -4.0 & -8.0 & -12.0\\ 3.0 & 21.0 & 15.0\\ 30.0 & 120.0 & 40.0 \end{array}\right]\\
+\Rightarrow &E = 205
+\end{align*}
+
+In solving the system of linear equation $\vect{A}\vect{x} = \vect{b}$ for $\vect{x}$, calculate $\vect{x} = A^{-1}b$ where I use \code{inv(A)} to get inverse. 
+\begin{align*}
+\vect{x} = \left[\begin{array}{c} -0.162\\ 1.24\\ -1.11 \end{array}\right]
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\section*{Problem 4}
+I use \code{blkdiag(A,A,A,A,A)} to create a $15\times15$ block diagonal matrix. 
+
+%%%%%%%%%%%%%%%%%%%%%%
+\section*{Problem 5}
 
 \end{document}  
 
