@@ -1,0 +1,401 @@
+\documentclass[11pt,letter]{article}
+%-------------------------
+\usepackage{amsmath,amssymb}
+
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{bm}
+\usepackage{ascmac} 
+\usepackage{amsmath}
+\usepackage{natbib} %
+\usepackage{fancybox}
+\usepackage{float}
+\usepackage{booktabs} 
+\usepackage{bm,xstring}
+\usepackage{tabularx}
+\usepackage{graphicx}
+%\usepackage{mediabb}
+\usepackage{lipsum}
+\usepackage {pdfpages}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{paralist}
+\usepackage{verbatim}
+\usepackage{subfig} 
+\usepackage{ascmac}
+\usepackage{amsthm}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{longtable}
+\usepackage{hhline}
+\usepackage{tabularx}
+\usepackage{booktabs}
+%\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{here}
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{url}
+\usepackage{xcolor}
+%\usepackage{filecontents}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage{titlesec}
+\usepackage{sectsty}
+\usepackage{listings}
+\usepackage[many]{tcolorbox}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage[dvipdfmx]{}
+%\usepackage[dvipdfmx]{color}
+\usepackage{epstopdf}
+%\usepackage[dvipdfmx]{color}
+
+\usepackage{bbm}
+\usepackage{pdflscape}
+\newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Theorem
+\newcounter{theo}[section] \setcounter{theo}{0}
+\renewcommand{\thetheo}{\arabic{theo}}
+\newenvironment{theo}[2][]{%
+\refstepcounter{theo}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!20]
+{\strut Theorem~\thetheo};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!20]
+{\strut Theorem~\thetheo:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=gray!20,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Lemma
+\newcounter{lem}[section] \setcounter{lem}{0}
+\renewcommand{\thelem}{\arabic{section}.\arabic{lem}}
+\newenvironment{lem}[2][]{%
+\refstepcounter{lem}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!50]
+{\strut Lemma~\thelem};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!50]
+{\strut Lemma~\thelem:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=gray!50,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Assumption
+\newcounter{asm}[section] \setcounter{asm}{0}
+\renewcommand{\theasm}{\arabic{section}.\arabic{asm}}
+\newenvironment{asm}[2][]{%
+\refstepcounter{asm}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!50]
+{\strut Assumption~\theasm};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!50]
+{\strut Assumption~\thelem:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=gray!50,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Definition
+\newcounter{defn}[section] \setcounter{defn}{0}
+\renewcommand{\thedefn}{\arabic{section}.\arabic{defn}}
+%\renewcommand{\thedefn}{\arabic{defn}}
+\newenvironment{defn}[2][]{%
+\refstepcounter{defn}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!50]
+{\strut Definition~\thedefn};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!50]
+{\strut Definition~\thedefn:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=gray!50,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Proof
+\newcounter{prf}[section]\setcounter{prf}{0}
+\renewcommand{\theprf}{\arabic{section}.\arabic{prf}}
+\newenvironment{prf}[2][]{%
+\refstepcounter{prf}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!50]
+{\strut Proof~\theprf};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!50]
+{\strut Proof~\theprf:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=gray!50,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\qed\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Note
+\newcounter{notes}[section] \setcounter{notes}{0}
+\renewcommand{\thenotes}{\arabic{notes}}
+\newenvironment{notes}[2][]{%
+\refstepcounter{notes}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!50]
+{\strut Note~\thenotes};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=gray!50]
+{\strut Note~\thenotes:~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=gray!50,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+
+\newtcolorbox{myboxi}[1][]{
+  breakable,
+  title=#1,
+  colback=white,
+  colbacktitle=white,
+  coltitle=black,
+  fonttitle=\bfseries,
+  bottomrule=0pt,
+  toprule=0pt,
+  leftrule=3pt,
+  rightrule=3pt,
+  titlerule=0pt,
+  arc=0pt,
+  outer arc=0pt,
+  colframe=black,
+}
+
+
+\usepackage{tgpagella}
+
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+%\usepackage[none]{hyphenat}
+\usepackage{geometry}
+\geometry{left=1in,right=1in, top=1in,bottom=1in}
+\setlength\parindent{0pt}
+%\renewcommand{\thesubsection}{(\alph{subsection})}
+\usepackage{fancyhdr}
+ 
+
+%\usepackage[shortlabels]{enumitem}
+%                    \setlist[enumerate, 1]{1\textsuperscript{o}}
+
+
+%--------------Shortcuts-----------
+%Expectation
+\newcommand{\Exp}[1]{\mathbb{E}\left[{#1}\right]}
+\newcommand{\Var}[1]{\text{Var}\left[{#1}\right]}
+\newcommand{\AsymVar}[1]{\text{AsymVar}\left[{#1}\right]}
+\newcommand{\cov}[1]{\text{cov}\left[{#1}\right]}
+\newcommand{\plim}[1]{\text{plim}\{{#1}\}}
+\newcommand{\Ind}[1]{\mathbbm{1}\{{#1}\}}
+\newcommand{\Prob}[1]{\text{Pr}\left({#1}\right)}
+%hat
+\newcommand{\h}[1]{\hat{#1}}
+\newcommand{\thetahat}{\hat{\theta}}
+\newcommand{\thetabar}{\overline{\theta}}
+\newcommand{\gbar}{\overline{g}}
+\newcommand{\psihat}{\hat{\psi}}
+
+\newcommand{\vecty}{\vect{y}}
+
+%upper and lower ber
+\newcommand{\ob}[1]{\overline{#1}}
+\newcommand{\ub}[1]{\underline{#1}}
+\newcommand{\taubar}{\overline{\tau}}
+
+%epsilon
+\newcommand{\epsi}{\varepsilon}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+\newcommand{\nonum}{\nonumber}
+
+%ln()
+\newcommand{\lnp}[1]{\ln\left({#1}\right)}
+
+% parenthesis
+\newcommand{\prn}[1]{\left({#1}\right)}
+\newcommand{\mprn}[1]{\{{#1}\}}
+\newcommand{\lmprn}[1]{\big\{{#1}\big\}}
+\newcommand{\Lmprn}[1]{\Big\{{#1}\Big\}}
+\newcommand{\llmprn}[1]{\biggl\{{#1}\biggr\}}
+\newcommand{\LLmprn}[1]{\Biggl\{{#1}\Biggr\}}
+\newcommand{\lprn}[1]{\left[{#1}\right]}
+
+% cfrac
+\newcommand{\cf}[2]{\cfrac{#1}{#2}}
+
+% convergence in probability
+\newcommand{\conp}{\xrightarrow{p}}
+\newcommand{\cond}{\xrightarrow{d}}
+\newcommand{\as}{\xrightarrow{a.s.}}
+
+% Norm
+\newcommand{\norm}[1]{\left\lVert{#1}\right\rVert}
+\newcommand{\abs}[1]{\left\lvert{#1}\right\rvert}
+
+\newcommand{\rootn}{\sqrt{n}}
+
+\newcommand{\note}[1]{\ \ \ \ \text{#1}}
+
+\newcommand{\ave}[1]{\frac{1}{#1}\sum_{i=1}^{#1}}
+
+\newcommand{\half}{\cfrac{1}{2}}
+\newcommand{\pihat}{\hat{\pi}}
+
+\newcommand{\mbf}[1]{\mathbf{#1}}
+
+\DeclareMathOperator*{\argmax}{argmax} 
+\DeclareMathOperator*{\argmin}{argmin} 
+\DeclareMathOperator*{\arginf}{arginf} 
+
+\newcommand{\pmat}[1]{\begin{pmatrix} #1 \end{pmatrix}}%
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}%
+
+\pagestyle{fancy}
+\fancyhf{}
+\chead{Survey Note: Chernozhukov and Hong (2003) \textit{The MCMC Approach to Classical Estimation}}
+\lhead{}
+\rfoot{\thepage}
+
+\allowdisplaybreaks
+\setstretch{1}
+
+\newtheorem{definition}{Definition}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{assumption}{Assumption}
+\newtheorem{theorem}{Theorem}
+
+\newcommand{\code}[1]{\texttt{#1}}
+
+\bibliographystyle{aer} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Penn State, Fall 2018, ECON512 Empirical Method} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Homework 1 \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Kensuke Suzuki} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%%%%%%%%%%%%%%%%%%%%%%
+\section*{Problem 1}
+Define $\vect{X} = \bmat{1,1.5,3,4,5,7,9,10}$ and construct the values of the function $Y1=-2*.5X$ and $Y2 = -2 + .5X^2$. We have
+
+\begin{align*}
+\vect{Y1} = \left[\begin{array}{cccccccc} -\frac{3}{2} & -\frac{5}{4} & -\frac{1}{2} & 0 & \frac{1}{2} & \frac{3}{2} & \frac{5}{2} & 3 \end{array}\right]\\
+\vect{Y2} = \left[\begin{array}{cccccccc} -\frac{3}{2} & -\frac{7}{8} & \frac{5}{2} & 6 & \frac{21}{2} & \frac{45}{2} & \frac{77}{2} & 48 \end{array}\right]
+\end{align*}
+
+Plot $Y1$ and $Y2$ against $X$ in a single graph
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Problem1.png} 
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\section{Problem 2}
+We use \code{linspace} command to create a vector containing evenly-spaced numbers between $[-10,20]$. See the attached code.
+
+
+
+\end{document}  
+
+
+
+  
