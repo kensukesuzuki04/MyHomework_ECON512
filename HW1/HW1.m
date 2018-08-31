@@ -22,3 +22,24 @@ X = linspace(-10,20,200)';
 sumX = sum(X)
 
 %% Problem 3
+
+A = [2,4,6; 1,7,5; 3,12,4]
+b = [-2;3;10]
+
+% C
+C = A'*b
+% D
+D = inv(A'*A) * b
+
+% E
+E0 = A .* (b*ones(1,3));
+E = sum(sum(E0),2)
+
+% F
+F = A(2,:)
+
+% Solve linear equatuons
+x = inv(A)*b
+
+%% Problem 4
+
