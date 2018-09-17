@@ -58,9 +58,6 @@ F = [F0(:,1), F0(:,2)];
 
 % Solve linear equatuons
 x = inv(A)*b;
-% it's better to stick with the A\b even though new matlab will do exactly
-% the same thing
-
 
 disp('------Problem 3------')
 A
@@ -75,7 +72,6 @@ disp(' ')
 %% Problem 4
 % block diagonal matrix
 B =  blkdiag(A,A,A,A,A);
-% use kron() instead
 
 disp('------Problem 4------')
 B
@@ -111,8 +107,6 @@ clear Y
 
 filename = 'datahw1.csv';
 data = csvread(filename);
-% csvread replaces NaN with 0. it creates bias in the estimates
-
 X = [ones(4392,1), data(:,3), data(:,4), data(:,6)];
 Y = data(:,5);
 
