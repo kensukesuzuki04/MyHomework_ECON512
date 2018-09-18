@@ -1,0 +1,1345 @@
+ECON512 HOMEWORK2: Ken Suzuki
+
+Ans1 =
+
+    0.4223
+    0.4223
+
+Problem1: for vA=vB=2 and pA=pB=1, DA= 0.422319, DA= 0.422319, and D0= 0.155362.
+iter 1: p(1)=1.000000, p(2)=1.000000, norm(f(x))=0.59724897 
+iter 2: p(1)=0.577681, p(2)=0.577681, norm(f(x))=0.96177748 
+iter 3: p(1)=1.691933, p(2)=1.691933, norm(f(x))=0.10363413 
+iter 4: p(1)=1.583549, p(2)=1.583549, norm(f(x))=0.01684145 
+iter 5: p(1)=1.598700, p(2)=1.598700, norm(f(x))=0.00026551 
+iter 6: p(1)=1.598942, p(2)=1.598942, norm(f(x))=0.00000069 
+Problem2: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.008011.
+
+T =
+
+     0     0
+     0     0
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+HW2
+[Warning: File not found or permission denied] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW2', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m', 4)" style="font-weight:bold">HW2</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m',4,0)">line 4</a>)] 
+ECON512 HOMEWORK2: Ken Suzuki
+
+Ans1 =
+
+    0.4223
+    0.4223
+
+Problem1: for vA=vB=2 and pA=pB=1, DA= 0.422319, DA= 0.422319, and D0= 0.155362.
+iter 1: p(1)=1.000000, p(2)=1.000000, norm(f(x))=0.59724897 
+iter 2: p(1)=0.577681, p(2)=0.577681, norm(f(x))=0.96177748 
+iter 3: p(1)=1.691933, p(2)=1.691933, norm(f(x))=0.10363413 
+iter 4: p(1)=1.583549, p(2)=1.583549, norm(f(x))=0.01684145 
+iter 5: p(1)=1.598700, p(2)=1.598700, norm(f(x))=0.00026551 
+iter 6: p(1)=1.598942, p(2)=1.598942, norm(f(x))=0.00000069 
+Problem2: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.006532.
+
+T =
+
+     0     0
+     0     0
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+HW2
+[Warning: File not found or permission denied] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW2', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m', 4)" style="font-weight:bold">HW2</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m',4,0)">line 4</a>)] 
+ECON512 HOMEWORK2: Ken Suzuki
+
+Ans1 =
+
+    0.4223
+    0.4223
+
+Problem1: for vA=vB=2 and pA=pB=1, DA= 0.422319, DA= 0.422319, and D0= 0.155362.
+iter 1: p(1)=1.000000, p(2)=1.000000, norm(f(x))=0.59724897 
+iter 2: p(1)=0.577681, p(2)=0.577681, norm(f(x))=0.96177748 
+iter 3: p(1)=1.691933, p(2)=1.691933, norm(f(x))=0.10363413 
+iter 4: p(1)=1.583549, p(2)=1.583549, norm(f(x))=0.01684145 
+iter 5: p(1)=1.598700, p(2)=1.598700, norm(f(x))=0.00026551 
+iter 6: p(1)=1.598942, p(2)=1.598942, norm(f(x))=0.00000069 
+Problem2: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.008719.
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+
+T =
+
+     0     0
+     0     0
+
+
+p =
+
+     0
+     0
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+HW2
+[Warning: File not found or permission denied] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW2', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m', 4)" style="font-weight:bold">HW2</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m',4,0)">line 4</a>)] 
+ECON512 HOMEWORK2: Ken Suzuki
+
+Ans1 =
+
+    0.4223
+    0.4223
+
+Problem1: for vA=vB=2 and pA=pB=1, DA= 0.422319, DA= 0.422319, and D0= 0.155362.
+iter 1: p(1)=1.000000, p(2)=1.000000, norm(f(x))=0.59724897 
+iter 2: p(1)=0.577681, p(2)=0.577681, norm(f(x))=0.96177748 
+iter 3: p(1)=1.691933, p(2)=1.691933, norm(f(x))=0.10363413 
+iter 4: p(1)=1.583549, p(2)=1.583549, norm(f(x))=0.01684145 
+iter 5: p(1)=1.598700, p(2)=1.598700, norm(f(x))=0.00026551 
+iter 6: p(1)=1.598942, p(2)=1.598942, norm(f(x))=0.00000069 
+Problem2: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.007473.
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW2>@(p,g)bertrandfocg(p,v,g)')" style="font-weight:bold">HW2>@(p,g)bertrandfocg(p,v,g)</a>
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW2', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m', 76)" style="font-weight:bold">HW2</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m',76,0)">line 76</a>)
+        fval_1 = fVal_focg(p(1,1))
+} 
+HW2
+[Warning: File not found or permission denied] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW2', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m', 4)" style="font-weight:bold">HW2</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m',4,0)">line 4</a>)] 
+ECON512 HOMEWORK2: Ken Suzuki
+
+Ans1 =
+
+    0.4223
+    0.4223
+
+Problem1: for vA=vB=2 and pA=pB=1, DA= 0.422319, DA= 0.422319, and D0= 0.155362.
+iter 1: p(1)=1.000000, p(2)=1.000000, norm(f(x))=0.59724897 
+iter 2: p(1)=0.577681, p(2)=0.577681, norm(f(x))=0.96177748 
+iter 3: p(1)=1.691933, p(2)=1.691933, norm(f(x))=0.10363413 
+iter 4: p(1)=1.583549, p(2)=1.583549, norm(f(x))=0.01684145 
+iter 5: p(1)=1.598700, p(2)=1.598700, norm(f(x))=0.00026551 
+iter 6: p(1)=1.598942, p(2)=1.598942, norm(f(x))=0.00000069 
+Problem2: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.006126.
+
+fval_1 =
+
+    0.4223
+
+{Undefined function or variable 'fVal_1'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW2', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m', 77)" style="font-weight:bold">HW2</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m',77,0)">line 77</a>)
+        if abs(fVal_1) < tol
+} 
+HW2
+[Warning: File not found or permission denied] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW2', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m', 4)" style="font-weight:bold">HW2</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m',4,0)">line 4</a>)] 
+ECON512 HOMEWORK2: Ken Suzuki
+
+Ans1 =
+
+    0.4223
+    0.4223
+
+Problem1: for vA=vB=2 and pA=pB=1, DA= 0.422319, DA= 0.422319, and D0= 0.155362.
+iter 1: p(1)=1.000000, p(2)=1.000000, norm(f(x))=0.59724897 
+iter 2: p(1)=0.577681, p(2)=0.577681, norm(f(x))=0.96177748 
+iter 3: p(1)=1.691933, p(2)=1.691933, norm(f(x))=0.10363413 
+iter 4: p(1)=1.583549, p(2)=1.583549, norm(f(x))=0.01684145 
+iter 5: p(1)=1.598700, p(2)=1.598700, norm(f(x))=0.00026551 
+iter 6: p(1)=1.598942, p(2)=1.598942, norm(f(x))=0.00000069 
+Problem2: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.005426.
+{Undefined function or variable 'fVal_1'.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW2', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m', 77)" style="font-weight:bold">HW2</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m',77,0)">line 77</a>)
+        if abs(fVal_1) < tol
+} 
+HW2
+[Warning: File not found or permission denied] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW2', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m', 4)" style="font-weight:bold">HW2</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW2\HW2.m',4,0)">line 4</a>)] 
