@@ -373,6 +373,10 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 
 \maketitle % Print the title
 
+\begin{center}
+The elapsed times described below may not coincides with the ones in the log file---They may change every time I run the command, but the relative size between algorithms does not affected. 
+\end{center}
+
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 1}
 
@@ -433,12 +437,12 @@ We then solve the system by using a Gauss-Seidel method. First we set the initia
 
 We iterate the set of two subiteration (indexed by $k$ above) until the norm of the vector obtained using the function \code{bertrandfoc.m} (which returns the vector of the LHS of FOCs) is below the tolerance level. This algorithm also yields the same equilibrium price vector $\vect{p}=[1.598942,1.598942]^\top$. 
 
-The elapsed time for problem 2 (Broyden Method) is 0.006158 and the one for problem 3 (Gauss-Seidel Method) is 0.008184. Therefore, Gauss-Seidel Method is faster. \textbf{WHY?}
+The elapsed time for problem 2 (Broyden Method) is 0.005407 and the one for problem 3 (Gauss-Seidel Method) is 0.014861. Therefore, Gauss-Seidel Method is slower. \textbf{WHY:}  intuitively it is because the Gauss-Seidel method does not update the $p_A$ and $p_B$ at once, rather, it solves two equations separately. More precisely, the Gauss-Seidel method solves for the first equation (FOC for firm A) for given price of $p_B$ (step 1) and then solves for the second equation (FOC for firm B) $p_B$ for given price of $p_A$ (step 2). Each step entails iteration. Of course, $p_A$ obtained in the first step is not necessarily the best response for given $p_B$ obtained in the subsequent step. Therefore, we need to iterate this set of two steps until it converges. So there exists ``double loop,'' which make the algorithm slower than Broyden.
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 4}
 
-In this problem, we use the update rule specified in the problem set and solve the system. It again yields the same result: $\vect{p}=[1.598942,1.598942]^\top$. 
+In this problem, we use the update rule specified in the problem set and solve the system. It again yields the same result: $\vect{p}=[1.598942,1.598942]^\top$. Time elapsed was 0.007433.
 
 
 %%%%%%%%%%%%%%%%%%%%%%
