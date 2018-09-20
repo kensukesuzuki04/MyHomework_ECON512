@@ -62,13 +62,18 @@ disp(P2);
 
 %% Problem 3
 
+clear all
+
 v = [2;2];
 p = [1;1];
-
 
 fVal_foc = @(p) bertrandfoc(p,v);
 fVal_focg = @(p,g) bertrandfocg(p,v,g);
 
+maxit = 100;
+tol = 1e-6;
+
+tic
 for iter = 1:maxit
     
     fval = fVal_foc(p);
@@ -87,7 +92,7 @@ for iter = 1:maxit
     % for given pB, solve the first equation for pA
     % We use Secant Method
     for iter_1 =1:maxit
-        fval_1 = fVal_focg(p(1,1),1);
+        fval_1 = fVal_focg(p,1);
         if abs(fval_1) < tol
             break
         else
@@ -114,6 +119,10 @@ for iter = 1:maxit
     end
     
 end
+elapsedTime_p3 = toc;
+
+P3 = sprintf('Problem3: for vA=vB=2, equilibrium prices are: PA= %f, PB= %f; time elapsed is %f.', p(1,1),p(2,1), elapsedTime_p3);
+disp(P3);
 
 %% Problem 4
 
@@ -147,6 +156,8 @@ P4 = sprintf('Problem4: for vA=vB=2, equilibrium prices are: PA= %f, PB= %f; tim
 disp(P4);
 
 %% Problem 5
+
+clear all
 
 vB_5 = [0:.2:3];
 v_5 = [2*ones(1,size(vB_5,2));vB_5 ];
