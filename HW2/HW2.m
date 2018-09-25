@@ -7,6 +7,8 @@ diary on
 
 disp('ECON512 HOMEWORK2: Ken Suzuki')
 
+disp(' ')
+
 %% Define bertrand and bertrandfoc function
 % bertrand: return demand for each good
 % bertrandfoc: return system of FOC (LHS)
@@ -22,6 +24,8 @@ D0 = 1 / (1+ sum(exp(v-p)) );
 
 P1 = sprintf('Problem1: for vA=vB=2 and pA=pB=1, DA= %f, DA= %f, and D0= %f.', Ans1(1,1),Ans1(2,1),D0);
 disp(P1);
+disp(' ')
+
 
 %% Problem 2
 
@@ -57,6 +61,7 @@ elapsedTime_p2 = toc;
 
 P2 = sprintf('Problem2: for vA=vB=2, equilibrium prices are: PA= %f, PB= %f; time elapsed is %f.', p(1,1),p(2,1), elapsedTime_p2);
 disp(P2);
+disp(' ')
 
 
 
@@ -123,6 +128,8 @@ elapsedTime_p3 = toc;
 
 P3 = sprintf('Problem3: for vA=vB=2, equilibrium prices are: PA= %f, PB= %f; time elapsed is %f.', p(1,1),p(2,1), elapsedTime_p3);
 disp(P3);
+disp(' ')
+
 
 %% Problem 4
 
@@ -154,6 +161,8 @@ elapsedTime_p4 = toc;
 
 P4 = sprintf('Problem4: for vA=vB=2, equilibrium prices are: PA= %f, PB= %f; time elapsed is %f.', p(1,1),p(2,1), elapsedTime_p4);
 disp(P4);
+disp(' ')
+
 
 %% Problem 5
 
