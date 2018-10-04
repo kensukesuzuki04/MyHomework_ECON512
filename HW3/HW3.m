@@ -23,8 +23,9 @@ TobitLLF_beta =  @(beta) TobitLLF(beta,X,y);
 beta0 = [log(mean(y)),zeros(1,5)]';
 
 
-%beta_p1 = fminsearch(TobitLLF_beta, beta0, options);
-beta_p1 = fminsearch(TobitLLF_beta, beta0);
+beta_p1 = fminsearch(TobitLLF_beta, beta0, options);
+saveas(gcf, 'q1.png')
+%beta_p1 = fminsearch(TobitLLF_beta, beta0);
 
 EstimatedCoeff = beta_p1;
 LLF= -TobitLLF(beta_p1,X,y)
@@ -161,7 +162,7 @@ title('Estimated Coefficients: NLS with lsqnonlin')
 xlabel('Initial Guess of beta0')
 ylabel('Estimated Coefficients')
 legend('beta0','beta1', 'beta3', 'beta5', 'beta5', 'beta6')
-saveas(gcf, 'NLS.lsqnonlin.png')
+saveas(gcf, 'NLS_lsqnonlin.png')
 
 % NLS with fminsearch
 figure 
