@@ -1,0 +1,2089 @@
+ECON512 HOMEWORK3: Ken Suzuki
+ 
+ 
+ Iteration   Func-count     min f(x)         Procedure
+     0            1          1709.72         
+     1            7          1709.21         initial simplex
+     2            8          1709.21         reflect
+     3           10          1708.84         expand
+     4           11          1708.84         reflect
+     5           13          1708.27         expand
+     6           14          1708.27         reflect
+     7           16          1707.78         expand
+     8           18          1707.01         expand
+     9           19          1707.01         reflect
+    10           21          1705.65         expand
+    11           22          1705.65         reflect
+    12           24          1704.15         expand
+    13           25          1704.15         reflect
+    14           27          1702.24         expand
+    15           28          1702.24         reflect
+    16           30          1698.52         expand
+    17           31          1698.52         reflect
+    18           33          1693.94         expand
+    19           34          1693.94         reflect
+    20           36          1688.49         expand
+    21           37          1688.49         reflect
+    22           39          1683.65         expand
+    23           41           1676.1         expand
+    24           42           1676.1         reflect
+    25           44          1665.65         expand
+    26           45          1665.65         reflect
+    27           47          1656.59         expand
+    28           48          1656.59         reflect
+    29           50          1641.12         expand
+    30           51          1641.12         reflect
+    31           52          1641.12         reflect
+    32           53          1641.12         reflect
+    33           54          1641.12         reflect
+    34           55          1641.12         reflect
+    35           56          1641.12         reflect
+    36           57          1641.12         reflect
+    37           59          1634.76         expand
+    38           61             1633         reflect
+    39           62             1633         reflect
+    40           64          1631.89         reflect
+    41           66          1631.89         contract inside
+    42           67          1631.89         reflect
+    43           69          1631.08         reflect
+    44           70          1631.08         reflect
+    45           72          1631.08         contract inside
+    46           74          1631.08         contract outside
+    47           76          1631.08         contract outside
+    48           78          1631.08         contract inside
+    49           80          1631.08         contract inside
+    50           82          1631.08         contract inside
+    51           83          1631.08         reflect
+    52           84          1631.08         reflect
+    53           86          1631.08         contract inside
+    54           88          1631.08         contract inside
+    55           90          1631.08         contract inside
+    56           91          1631.08         reflect
+    57           93          1630.45         expand
+    58           95          1630.45         contract outside
+    59           96          1630.45         reflect
+    60           97          1630.45         reflect
+    61           98          1630.45         reflect
+    62           99          1630.45         reflect
+    63          100          1630.45         reflect
+    64          102          1629.64         expand
+    65          103          1629.64         reflect
+    66          105          1629.09         expand
+    67          106          1629.09         reflect
+    68          107          1629.09         reflect
+    69          109          1627.27         expand
+    70          110          1627.27         reflect
+    71          111          1627.27         reflect
+    72          113          1625.35         expand
+    73          114          1625.35         reflect
+    74          115          1625.35         reflect
+    75          117          1621.88         expand
+    76          118          1621.88         reflect
+    77          119          1621.88         reflect
+    78          121          1618.43         expand
+    79          122          1618.43         reflect
+    80          124          1614.54         expand
+    81          126          1608.96         expand
+    82          127          1608.96         reflect
+    83          129          1602.67         expand
+    84          130          1602.67         reflect
+    85          132          1591.34         expand
+    86          133          1591.34         reflect
+    87          135          1583.22         expand
+    88          137          1568.64         expand
+    89          138          1568.64         reflect
+    90          140          1551.56         expand
+    91          141          1551.56         reflect
+    92          143          1541.41         expand
+    93          145          1526.86         expand
+    94          147          1519.52         expand
+    95          149          1518.24         reflect
+    96          151          1516.74         reflect
+    97          152          1516.74         reflect
+    98          154          1516.74         contract outside
+    99          155          1516.74         reflect
+   100          157          1516.74         contract inside
+   101          159          1516.74         contract inside
+   102          161          1513.33         reflect
+   103          162          1513.33         reflect
+   104          163          1513.33         reflect
+   105          165          1511.48         reflect
+   106          166          1511.48         reflect
+   107          168          1511.48         contract inside
+   108          169          1511.48         reflect
+   109          170          1511.48         reflect
+   110          172          1510.58         reflect
+   111          173          1510.58         reflect
+   112          175          1510.58         contract inside
+   113          177          1509.43         reflect
+   114          179          1509.43         contract inside
+   115          181          1509.07         reflect
+   116          182          1509.07         reflect
+   117          184          1508.11         reflect
+   118          185          1508.11         reflect
+   119          186          1508.11         reflect
+   120          188          1507.96         reflect
+   121          189          1507.96         reflect
+   122          191          1507.96         contract inside
+   123          193          1507.96         contract inside
+   124          195          1507.67         reflect
+   125          197          1507.67         contract inside
+   126          199          1507.56         contract outside
+   127          200          1507.56         reflect
+   128          202          1507.52         contract inside
+   129          204           1507.5         contract inside
+   130          205           1507.5         reflect
+   131          207           1507.5         contract inside
+   132          209          1507.46         contract inside
+   133          211          1507.26         reflect
+   134          213          1507.26         contract inside
+   135          215          1507.26         contract inside
+   136          217          1507.26         contract inside
+   137          218          1507.26         reflect
+   138          220          1507.26         reflect
+   139          222          1507.26         contract inside
+   140          224          1507.26         contract outside
+   141          225          1507.26         reflect
+   142          227          1507.19         reflect
+   143          228          1507.19         reflect
+   144          230          1507.19         contract inside
+   145          232          1507.19         contract inside
+   146          233          1507.19         reflect
+   147          235          1507.19         contract inside
+   148          236          1507.19         reflect
+   149          237          1507.19         reflect
+   150          238          1507.19         reflect
+   151          240          1507.19         contract inside
+   152          242          1507.15         expand
+   153          243          1507.15         reflect
+   154          245          1507.15         contract inside
+   155          246          1507.15         reflect
+   156          247          1507.15         reflect
+   157          248          1507.15         reflect
+   158          250          1507.13         reflect
+   159          251          1507.13         reflect
+   160          253          1507.11         expand
+   161          254          1507.11         reflect
+   162          256          1507.11         contract inside
+   163          258          1507.11         contract inside
+   164          260          1507.11         reflect
+   165          262          1507.05         expand
+   166          264          1507.05         contract outside
+   167          265          1507.05         reflect
+   168          266          1507.05         reflect
+   169          268          1507.02         expand
+   170          269          1507.02         reflect
+   171          270          1507.02         reflect
+   172          272          1506.91         expand
+   173          273          1506.91         reflect
+   174          274          1506.91         reflect
+   175          276          1506.83         expand
+   176          277          1506.83         reflect
+   177          279          1506.76         expand
+   178          281          1506.56         expand
+   179          282          1506.56         reflect
+   180          283          1506.56         reflect
+   181          284          1506.56         reflect
+   182          285          1506.56         reflect
+   183          287           1506.5         expand
+   184          289          1506.47         reflect
+   185          291           1506.2         expand
+   186          292           1506.2         reflect
+   187          293           1506.2         reflect
+   188          295          1506.14         expand
+   189          297          1506.14         contract outside
+   190          299          1506.06         expand
+   191          301          1505.99         expand
+   192          303          1505.75         expand
+   193          305          1505.64         expand
+   194          306          1505.64         reflect
+   195          308          1505.64         contract inside
+   196          310          1505.39         expand
+   197          312           1505.2         expand
+   198          313           1505.2         reflect
+   199          314           1505.2         reflect
+   200          316          1504.89         expand
+   201          317          1504.89         reflect
+   202          319          1504.83         reflect
+   203          320          1504.83         reflect
+   204          322           1504.3         expand
+   205          324          1504.16         expand
+   206          325          1504.16         reflect
+   207          326          1504.16         reflect
+   208          328          1504.05         reflect
+   209          330          1502.96         expand
+   210          332          1502.96         contract inside
+   211          333          1502.96         reflect
+   212          334          1502.96         reflect
+   213          336          1502.09         expand
+   214          337          1502.09         reflect
+   215          339          1501.58         expand
+   216          341             1501         expand
+   217          343          1499.73         expand
+   218          344          1499.73         reflect
+   219          345          1499.73         reflect
+   220          347          1499.55         reflect
+   221          348          1499.55         reflect
+   222          350          1499.24         reflect
+   223          352          1498.44         expand
+   224          353          1498.44         reflect
+   225          355          1495.79         expand
+   226          356          1495.79         reflect
+   227          357          1495.79         reflect
+   228          359           1494.4         expand
+   229          360           1494.4         reflect
+   230          362          1492.17         expand
+   231          363          1492.17         reflect
+   232          365           1491.7         reflect
+   233          367          1491.53         reflect
+   234          368          1491.53         reflect
+   235          370          1489.35         expand
+   236          372          1488.74         reflect
+   237          373          1488.74         reflect
+   238          374          1488.74         reflect
+   239          375          1488.74         reflect
+   240          377          1488.74         contract inside
+   241          378          1488.74         reflect
+   242          379          1488.74         reflect
+   243          381          1488.61         contract inside
+   244          383          1488.53         contract inside
+   245          385          1488.33         contract inside
+   246          386          1488.33         reflect
+   247          388          1488.33         contract inside
+   248          390          1488.33         contract inside
+   249          392          1488.33         contract inside
+   250          394          1488.33         contract outside
+   251          396          1488.28         reflect
+   252          398          1488.18         reflect
+   253          399          1488.18         reflect
+   254          401          1488.14         reflect
+   255          403          1488.14         contract inside
+   256          404          1488.14         reflect
+   257          406          1488.13         reflect
+   258          408           1488.1         contract inside
+   259          409           1488.1         reflect
+   260          411           1488.1         contract outside
+   261          413          1488.09         contract inside
+   262          415          1488.07         contract inside
+   263          417          1488.06         contract inside
+   264          419          1488.06         contract inside
+   265          421          1488.06         contract inside
+   266          422          1488.06         reflect
+   267          423          1488.06         reflect
+   268          425          1488.06         contract inside
+   269          427          1488.05         contract inside
+   270          429          1488.05         reflect
+   271          431          1488.05         contract inside
+   272          432          1488.05         reflect
+   273          434          1488.04         contract inside
+   274          436          1488.04         contract inside
+   275          438          1488.03         reflect
+   276          440          1488.02         expand
+   277          442          1488.02         contract inside
+   278          444          1488.02         contract inside
+   279          445          1488.02         reflect
+   280          447          1488.01         expand
+   281          449          1488.01         expand
+   282          451          1487.99         expand
+   283          452          1487.99         reflect
+   284          454          1487.96         expand
+   285          455          1487.96         reflect
+   286          457           1487.9         expand
+   287          458           1487.9         reflect
+   288          459           1487.9         reflect
+   289          461          1487.83         expand
+   290          462          1487.83         reflect
+   291          463          1487.83         reflect
+   292          464          1487.83         reflect
+   293          466          1487.83         reflect
+   294          468          1487.67         expand
+   295          469          1487.67         reflect
+   296          470          1487.67         reflect
+   297          472          1487.59         expand
+   298          473          1487.59         reflect
+   299          475          1487.41         expand
+   300          476          1487.41         reflect
+   301          477          1487.41         reflect
+   302          479          1487.11         expand
+   303          480          1487.11         reflect
+   304          482          1486.85         expand
+   305          483          1486.85         reflect
+   306          484          1486.85         reflect
+   307          486          1486.69         expand
+   308          488          1485.93         expand
+   309          489          1485.93         reflect
+   310          490          1485.93         reflect
+   311          491          1485.93         reflect
+   312          493          1485.72         expand
+   313          495           1485.7         reflect
+   314          497          1484.28         expand
+   315          498          1484.28         reflect
+   316          499          1484.28         reflect
+   317          500          1484.28         reflect
+   318          501          1484.28         reflect
+   319          503          1483.42         expand
+   320          504          1483.42         reflect
+   321          506          1482.48         expand
+   322          507          1482.48         reflect
+   323          509           1481.1         expand
+   324          511          1478.91         expand
+   325          512          1478.91         reflect
+   326          513          1478.91         reflect
+   327          515          1475.91         expand
+   328          516          1475.91         reflect
+   329          518          1471.98         expand
+   330          519          1471.98         reflect
+   331          521          1468.73         expand
+   332          522          1468.73         reflect
+   333          524          1466.74         expand
+   334          526          1459.49         expand
+   335          527          1459.49         reflect
+   336          528          1459.49         reflect
+   337          529          1459.49         reflect
+   338          531          1454.77         expand
+   339          532          1454.77         reflect
+   340          533          1454.77         reflect
+   341          534          1454.77         reflect
+   342          535          1454.77         reflect
+   343          537          1454.25         reflect
+   344          539          1454.25         contract inside
+   345          540          1454.25         reflect
+   346          542           1449.4         expand
+   347          543           1449.4         reflect
+   348          544           1449.4         reflect
+   349          545           1449.4         reflect
+   350          546           1449.4         reflect
+   351          548           1449.3         reflect
+   352          550           1443.1         expand
+   353          551           1443.1         reflect
+   354          552           1443.1         reflect
+   355          553           1443.1         reflect
+   356          555           1443.1         contract outside
+   357          557          1441.74         expand
+   358          558          1441.74         reflect
+   359          560           1439.6         expand
+   360          561           1439.6         reflect
+   361          563          1439.17         reflect
+   362          565          1433.52         expand
+   363          566          1433.52         reflect
+   364          567          1433.52         reflect
+   365          568          1433.52         reflect
+   366          570          1431.72         reflect
+   367          571          1431.72         reflect
+   368          572          1431.72         reflect
+   369          573          1431.72         reflect
+   370          574          1431.72         reflect
+   371          576          1431.63         reflect
+   372          577          1431.63         reflect
+   373          578          1431.63         reflect
+   374          580          1431.31         contract inside
+   375          582          1431.17         contract inside
+   376          584          1431.05         contract outside
+   377          586          1430.67         contract inside
+   378          588          1430.57         contract inside
+   379          590          1430.44         contract inside
+   380          592          1430.44         contract inside
+   381          593          1430.44         reflect
+   382          595          1430.09         reflect
+   383          596          1430.09         reflect
+   384          597          1430.09         reflect
+   385          598          1430.09         reflect
+   386          600          1429.75         reflect
+   387          601          1429.75         reflect
+   388          602          1429.75         reflect
+   389          603          1429.75         reflect
+   390          605          1429.75         contract inside
+   391          606          1429.75         reflect
+   392          608          1429.75         contract inside
+   393          610          1429.58         reflect
+   394          612          1429.58         contract inside
+   395          614          1429.57         reflect
+   396          616          1429.54         reflect
+   397          618          1429.54         contract outside
+   398          620          1429.51         reflect
+   399          622          1429.49         contract inside
+   400          624           1429.1         expand
+   401          625           1429.1         reflect
+   402          626           1429.1         reflect
+   403          627           1429.1         reflect
+   404          629           1429.1         contract inside
+   405          630           1429.1         reflect
+   406          632           1429.1         contract outside
+   407          633           1429.1         reflect
+   408          634           1429.1         reflect
+   409          635           1429.1         reflect
+   410          637          1429.03         expand
+   411          638          1429.03         reflect
+   412          639          1429.03         reflect
+   413          640          1429.03         reflect
+   414          642          1428.96         expand
+   415          643          1428.96         reflect
+   416          644          1428.96         reflect
+   417          645          1428.96         reflect
+   418          647          1428.87         reflect
+   419          649          1428.87         contract inside
+   420          650          1428.87         reflect
+   421          651          1428.87         reflect
+   422          653          1428.86         contract inside
+   423          655          1428.85         contract inside
+   424          657          1428.85         contract inside
+   425          659          1428.78         reflect
+   426          660          1428.78         reflect
+   427          662          1428.78         contract inside
+   428          664          1428.78         contract inside
+   429          665          1428.78         reflect
+   430          666          1428.78         reflect
+   431          667          1428.78         reflect
+   432          669          1428.78         contract inside
+   433          671          1428.78         contract inside
+   434          672          1428.78         reflect
+   435          674          1428.78         contract inside
+   436          676          1428.77         contract inside
+   437          678          1428.77         contract inside
+   438          680          1428.77         contract outside
+   439          682          1428.77         contract inside
+   440          683          1428.77         reflect
+   441          685          1428.77         contract inside
+   442          687          1428.77         contract inside
+   443          689          1428.77         contract inside
+   444          691          1428.77         contract inside
+   445          692          1428.77         reflect
+   446          694          1428.77         contract outside
+   447          696          1428.77         contract inside
+   448          698          1428.77         contract inside
+   449          700          1428.77         contract inside
+   450          701          1428.77         reflect
+   451          703          1428.77         contract outside
+   452          705          1428.77         contract inside
+   453          706          1428.77         reflect
+   454          708          1428.77         contract inside
+   455          710          1428.77         contract inside
+   456          711          1428.77         reflect
+   457          713          1428.77         contract inside
+   458          715          1428.77         contract inside
+   459          716          1428.77         reflect
+   460          718          1428.77         contract inside
+   461          719          1428.77         reflect
+   462          721          1428.77         contract inside
+   463          723          1428.77         contract inside
+   464          725          1428.77         contract inside
+   465          727          1428.77         reflect
+   466          728          1428.77         reflect
+   467          730          1428.77         contract outside
+   468          731          1428.77         reflect
+   469          733          1428.77         reflect
+   470          734          1428.77         reflect
+   471          736          1428.77         contract inside
+   472          737          1428.77         reflect
+   473          738          1428.77         reflect
+   474          740          1428.77         contract inside
+   475          742          1428.77         reflect
+   476          744          1428.77         reflect
+   477          745          1428.77         reflect
+   478          747          1428.77         contract inside
+   479          749          1428.77         reflect
+   480          751          1428.77         expand
+   481          752          1428.77         reflect
+   482          753          1428.77         reflect
+   483          754          1428.77         reflect
+   484          756          1428.77         reflect
+   485          758          1428.77         reflect
+   486          759          1428.77         reflect
+   487          761          1428.77         expand
+   488          762          1428.77         reflect
+   489          763          1428.77         reflect
+   490          764          1428.77         reflect
+   491          766          1428.77         expand
+   492          767          1428.77         reflect
+   493          768          1428.77         reflect
+   494          770          1428.77         expand
+   495          771          1428.77         reflect
+   496          772          1428.77         reflect
+   497          773          1428.77         reflect
+   498          775          1428.77         expand
+   499          776          1428.77         reflect
+   500          777          1428.77         reflect
+   501          778          1428.77         reflect
+   502          780          1428.77         reflect
+   503          782          1428.77         expand
+   504          784          1428.77         expand
+   505          786          1428.77         expand
+   506          787          1428.77         reflect
+   507          789          1428.77         expand
+   508          790          1428.77         reflect
+   509          792          1428.77         expand
+   510          793          1428.77         reflect
+   511          794          1428.77         reflect
+   512          795          1428.77         reflect
+   513          797          1428.77         expand
+   514          798          1428.77         reflect
+   515          799          1428.77         reflect
+   516          801          1428.77         expand
+   517          803          1428.77         reflect
+   518          805          1428.76         expand
+   519          806          1428.76         reflect
+   520          807          1428.76         reflect
+   521          808          1428.76         reflect
+   522          809          1428.76         reflect
+   523          810          1428.76         reflect
+   524          812          1428.76         reflect
+   525          814          1428.76         expand
+   526          816          1428.76         expand
+   527          817          1428.76         reflect
+   528          818          1428.76         reflect
+   529          820          1428.76         expand
+   530          821          1428.76         reflect
+   531          823          1428.76         reflect
+   532          824          1428.76         reflect
+   533          826          1428.75         expand
+   534          827          1428.75         reflect
+   535          828          1428.75         reflect
+   536          830          1428.75         contract outside
+   537          831          1428.75         reflect
+   538          833          1428.75         expand
+   539          834          1428.75         reflect
+   540          836          1428.75         expand
+   541          837          1428.75         reflect
+   542          838          1428.75         reflect
+   543          840          1428.74         expand
+   544          842          1428.73         expand
+   545          843          1428.73         reflect
+   546          844          1428.73         reflect
+   547          846          1428.73         expand
+   548          847          1428.73         reflect
+   549          848          1428.73         reflect
+   550          850          1428.73         expand
+   551          852          1428.71         expand
+   552          854           1428.7         expand
+   553          855           1428.7         reflect
+   554          856           1428.7         reflect
+   555          857           1428.7         reflect
+   556          858           1428.7         reflect
+   557          859           1428.7         reflect
+   558          861           1428.7         reflect
+   559          863           1428.7         reflect
+   560          865           1428.7         reflect
+   561          866           1428.7         reflect
+   562          868          1428.69         reflect
+   563          870          1428.69         reflect
+   564          872          1428.69         reflect
+   565          873          1428.69         reflect
+   566          875          1428.69         reflect
+   567          876          1428.69         reflect
+   568          878          1428.69         reflect
+   569          880          1428.69         reflect
+   570          882          1428.68         reflect
+   571          883          1428.68         reflect
+   572          885          1428.68         reflect
+   573          887          1428.68         contract inside
+   574          888          1428.68         reflect
+   575          890          1428.68         reflect
+   576          892          1428.68         reflect
+   577          893          1428.68         reflect
+   578          895          1428.67         reflect
+   579          896          1428.67         reflect
+   580          897          1428.67         reflect
+   581          899          1428.67         contract inside
+   582          900          1428.67         reflect
+   583          902          1428.67         reflect
+   584          903          1428.67         reflect
+   585          904          1428.67         reflect
+   586          906          1428.67         contract inside
+   587          908          1428.67         expand
+   588          909          1428.67         reflect
+   589          910          1428.67         reflect
+   590          911          1428.67         reflect
+   591          912          1428.67         reflect
+   592          914          1428.66         expand
+   593          915          1428.66         reflect
+   594          917          1428.66         expand
+   595          919          1428.65         expand
+   596          920          1428.65         reflect
+   597          921          1428.65         reflect
+   598          923          1428.65         reflect
+   599          925          1428.62         expand
+   600          926          1428.62         reflect
+   601          927          1428.62         reflect
+   602          928          1428.62         reflect
+   603          929          1428.62         reflect
+   604          931          1428.62         expand
+   605          933          1428.59         expand
+   606          934          1428.59         reflect
+   607          936          1428.57         expand
+   608          937          1428.57         reflect
+   609          938          1428.57         reflect
+   610          940          1428.57         reflect
+   611          942          1428.53         expand
+   612          943          1428.53         reflect
+   613          944          1428.53         reflect
+   614          946          1428.49         expand
+   615          947          1428.49         reflect
+   616          948          1428.49         reflect
+   617          949          1428.49         reflect
+   618          951          1428.44         expand
+   619          953          1428.35         expand
+   620          954          1428.35         reflect
+   621          955          1428.35         reflect
+   622          956          1428.35         reflect
+   623          958          1428.23         expand
+   624          959          1428.23         reflect
+   625          961          1428.14         expand
+   626          962          1428.14         reflect
+   627          964          1428.06         expand
+   628          965          1428.06         reflect
+   629          967          1428.04         reflect
+   630          969          1427.78         expand
+   631          970          1427.78         reflect
+   632          971          1427.78         reflect
+   633          972          1427.78         reflect
+   634          974          1427.61         expand
+   635          975          1427.61         reflect
+   636          977          1427.38         expand
+   637          978          1427.38         reflect
+   638          979          1427.38         reflect
+   639          980          1427.38         reflect
+   640          981          1427.38         reflect
+   641          983          1427.34         reflect
+   642          984          1427.34         reflect
+   643          986          1427.34         contract inside
+   644          988          1427.34         contract inside
+   645          989          1427.34         reflect
+   646          990          1427.34         reflect
+   647          992          1427.18         expand
+   648          993          1427.18         reflect
+   649          994          1427.18         reflect
+   650          995          1427.18         reflect
+   651          996          1427.18         reflect
+   652          997          1427.18         reflect
+   653          998          1427.18         reflect
+   654          999          1427.18         reflect
+   655         1000          1427.18         reflect
+   656         1002          1427.14         reflect
+   657         1003          1427.14         reflect
+   658         1004          1427.14         reflect
+   659         1005          1427.14         reflect
+   660         1007          1427.14         contract inside
+   661         1009           1427.1         reflect
+   662         1010           1427.1         reflect
+   663         1012           1427.1         contract inside
+   664         1013           1427.1         reflect
+   665         1015           1427.1         contract outside
+   666         1016           1427.1         reflect
+   667         1017           1427.1         reflect
+   668         1019          1427.09         reflect
+   669         1021          1427.06         reflect
+   670         1023          1427.06         contract inside
+   671         1024          1427.06         reflect
+   672         1025          1427.06         reflect
+   673         1027          1427.06         contract inside
+   674         1029          1427.06         contract inside
+   675         1031          1427.06         contract outside
+   676         1033          1427.06         contract inside
+   677         1034          1427.06         reflect
+   678         1036          1427.06         contract inside
+   679         1037          1427.06         reflect
+   680         1039          1427.05         expand
+   681         1041          1427.05         reflect
+   682         1042          1427.05         reflect
+   683         1044          1427.05         reflect
+   684         1045          1427.05         reflect
+   685         1046          1427.05         reflect
+   686         1048          1427.05         reflect
+   687         1049          1427.05         reflect
+   688         1051          1427.04         reflect
+   689         1052          1427.04         reflect
+   690         1053          1427.04         reflect
+   691         1055          1427.04         reflect
+   692         1057          1427.04         contract outside
+   693         1059          1427.04         contract outside
+   694         1061          1427.04         contract inside
+   695         1063          1427.04         contract inside
+   696         1065          1427.04         contract outside
+   697         1067          1427.04         contract inside
+   698         1068          1427.04         reflect
+   699         1069          1427.04         reflect
+   700         1070          1427.04         reflect
+   701         1071          1427.04         reflect
+   702         1072          1427.04         reflect
+   703         1073          1427.04         reflect
+   704         1075          1427.04         contract outside
+   705         1077          1427.04         contract inside
+   706         1078          1427.04         reflect
+   707         1079          1427.04         reflect
+   708         1081          1427.04         reflect
+   709         1083          1427.04         contract inside
+   710         1085          1427.04         contract inside
+   711         1086          1427.04         reflect
+   712         1088          1427.04         reflect
+   713         1090          1427.04         contract inside
+   714         1092          1427.04         contract inside
+   715         1094          1427.04         contract inside
+   716         1095          1427.04         reflect
+   717         1096          1427.04         reflect
+   718         1098          1427.04         contract inside
+   719         1100          1427.04         contract inside
+   720         1101          1427.04         reflect
+   721         1103          1427.04         contract inside
+   722         1105          1427.04         contract inside
+   723         1107          1427.04         contract inside
+   724         1109          1427.04         contract outside
+   725         1111          1427.04         contract inside
+   726         1112          1427.04         reflect
+   727         1114          1427.04         contract inside
+   728         1115          1427.04         reflect
+   729         1117          1427.04         contract inside
+   730         1118          1427.04         reflect
+   731         1120          1427.04         contract inside
+   732         1122          1427.04         contract inside
+   733         1124          1427.04         contract inside
+   734         1126          1427.04         contract inside
+   735         1128          1427.04         contract inside
+   736         1130          1427.04         contract outside
+   737         1131          1427.04         reflect
+   738         1133          1427.04         contract inside
+   739         1134          1427.04         reflect
+   740         1136          1427.04         contract inside
+   741         1138          1427.04         contract outside
+   742         1140          1427.04         contract inside
+   743         1142          1427.04         contract inside
+   744         1143          1427.04         reflect
+   745         1145          1427.04         contract inside
+   746         1147          1427.04         contract outside
+   747         1149          1427.04         contract inside
+   748         1150          1427.04         reflect
+   749         1152          1427.04         contract inside
+   750         1154          1427.04         reflect
+   751         1156          1427.04         contract inside
+   752         1158          1427.04         contract outside
+   753         1159          1427.04         reflect
+   754         1161          1427.04         contract inside
+   755         1162          1427.04         reflect
+   756         1164          1427.04         contract inside
+   757         1165          1427.04         reflect
+   758         1166          1427.04         reflect
+   759         1167          1427.04         reflect
+   760         1169          1427.04         contract inside
+ 
+Optimization terminated:
+ the current x satisfies the termination criteria using OPTIONS.TolX of 1.000000e-04 
+ and F(X) satisfies the convergence criteria using OPTIONS.TolFun of 1.000000e-04 
+
+
+LLF =
+
+  -1.4270e+03
+
+------Problem 1------
+Estimated Parameter Vector
+
+Result_Q1 =
+
+  6Å~2 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>Parameters</strong><strong>    EstimatedCoeff</strong>
+    <strong>__________</strong>    <strong>______________</strong>
+
+    'beta0'          2.5339     
+    'beta1'       -0.032253     
+    'beta2'         0.11569     
+    'beta3'        -0.35404     
+    'beta4'        0.079828     
+    'beta5'        -0.40945     
+
+<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',37,1)">37  </a>clear beta 
+if system_dependent('IsDebugMode')==1, dbcont; end
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',7.106383e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+beta_p2 =
+
+    2.5339
+   -0.0323
+    0.1157
+   -0.3540
+    0.0798
+   -0.4094
+
+------Problem 2------
+Method: Quasi-Newton Optimization (fminunc)
+Estimated Parameter Vector
+
+Result_Q2 =
+
+  6Å~2 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>Parameters</strong><strong>    EstimatedCoeff</strong>
+    <strong>__________</strong>    <strong>______________</strong>
+
+    'beta0'          2.5339     
+    'beta1'       -0.032255     
+    'beta2'          0.1157     
+    'beta3'        -0.35404     
+    'beta4'        0.079828     
+    'beta5'        -0.40944     
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 51)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',51,0)">line 51</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+
+beta_p3_1 =
+
+    0.3755
+   -0.0119
+    0.0856
+   -0.0503
+    0.0187
+   -0.0745
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 52)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',52,0)">line 52</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_possible_lsq','CSHelpWindow');">Local minimum possible</a>.
+
+lsqnonlin stopped because the final change in the sum of squares relative to 
+its initial value is less than the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'function_tolerance_lsq','CSHelpWindow');">function tolerance</a>.
+
+<<a href = "matlab: createExitMsg('levenbergMarquardt',3.000000e+00,true,true,'lsqnonlin',1.673159e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+beta_p3_2 =
+
+    2.5341
+   -0.0337
+    0.1151
+   -0.3517
+    0.0793
+   -0.4066
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 61)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',61,0)">line 61</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+
+beta_p3_1 =
+
+    0.3755
+   -0.0119
+    0.0856
+   -0.0503
+    0.0187
+   -0.0745
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 62)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',62,0)">line 62</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_possible_lsq','CSHelpWindow');">Local minimum possible</a>.
+
+lsqnonlin stopped because the final change in the sum of squares relative to 
+its initial value is less than the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'function_tolerance_lsq','CSHelpWindow');">function tolerance</a>.
+
+<<a href = "matlab: createExitMsg('levenbergMarquardt',3.000000e+00,true,true,'lsqnonlin',1.673159e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+beta_p3_2 =
+
+    2.5341
+   -0.0337
+    0.1151
+   -0.3517
+    0.0793
+   -0.4066
+
+------Problem 3------
+NLS with lsqnonlin
+Estimated Parameter Vector
+Coeff1: [log(mean(y)),zeros(1,5)] as initial guess
+Coeff2: MLE estimator (question 1) as initial guess
+if system_dependent('IsDebugMode')==1, dbcont; end
+
+Result_Q3 =
+
+  6Å~3 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>Parameters</strong><strong>     Coeff1  </strong><strong>     Coeff2  </strong>
+    <strong>__________</strong>    <strong>_________</strong>    <strong>_________</strong>
+
+    'beta0'         0.37545       2.5341
+    'beta1'       -0.011913    -0.033661
+    'beta2'        0.085575       0.1151
+    'beta3'       -0.050282     -0.35169
+    'beta4'        0.018673     0.079286
+    'beta5'        -0.07454     -0.40661
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+
+beta_p4_1 =
+
+  345.9665
+    1.2039
+   -7.8108
+    1.8421
+   -0.5917
+    0.9241
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+
+beta_p4_2 =
+
+  153.0849
+    0.6842
+    5.0161
+   22.9066
+    1.7679
+    7.7374
+
+------Problem 4------
+NLS with Nelder-Mead
+Estimated Parameter Vector
+Coeff1: [log(mean(y)),zeros(1,5)] as initial guess
+Coeff2: MLE estimator (question 1) as initial guess
+if system_dependent('IsDebugMode')==1, dbcont; end
+
+Result_Q3 =
+
+  6Å~3 <a href="matlab:helpPopup table" style="font-weight:bold">table</a>
+
+    <strong>Parameters</strong><strong>     Coeff1 </strong><strong>    Coeff2 </strong>
+    <strong>__________</strong>    <strong>________</strong>    <strong>_______</strong>
+
+    'beta0'         345.97     153.08
+    'beta1'         1.2039    0.68425
+    'beta2'        -7.8108     5.0161
+    'beta3'         1.8421     22.907
+    'beta4'       -0.59171     1.7679
+    'beta5'        0.92407     7.7374
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1431.127391 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1427.646245 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1458.130115 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1430.737913 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1546.179212 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1440.374465 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1448.312452 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1432.876843 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1554.679295 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1434.259232 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1533.507458 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1538.642694 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1468.722830 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1466.209552 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1443.434541 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1540.469055 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1488.382220 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1435.493973 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1436.943685 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1475.688944 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1439.912877 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1512.247087 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: 1451.696838 
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.224006e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.231061e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',3.545094e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',3.753379e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.975261e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',8.118005e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',1.201778e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',1.356737e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',2.592208e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',1.584174e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',2.609223e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',3.204785e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',1.697895e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',7.028134e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',8.291069e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',2.016757e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',1.205868e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.654429e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.371438e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',5.401399e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',1.105228e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',8.744961e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.949763e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',8.410403e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',4.353190e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.379748e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',3.779002e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',1.928148e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',5.046216e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',8.937858e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',2.929927e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.525043e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',1.913895e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',3.833401e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',2.124188e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',2.750703e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',6.187203e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',9.625856e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',1.194090e-08,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',7.388747e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_unconstrained','CSHelpWindow');">Local minimum found</a>.
+
+Optimization completed because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'grad_size','CSHelpWindow');">size of the gradient</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'optimality_tolerance_unc','CSHelpWindow');">optimality tolerance</a>.
+
+<<a href = "matlab: createExitMsg('fminusub',1.000000e+00,true,true,'fminunc',9.147214e-07,'default',1.000000e-06,0.000000e+00,'',0.000000e+00,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+[Warning: Trust-region-reflective algorithm requires at least as many equations as
+variables; using Levenberg-Marquardt algorithm instead.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqncommon', 'C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m', 56)" style="font-weight:bold">lsqncommon</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\shared\optimlib\lsqncommon.m',56,0)">line 56</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('lsqnonlin', 'C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m', 240)" style="font-weight:bold">lsqnonlin</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2017a\toolbox\optim\optim\lsqnonlin.m',240,0)">line 240</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('HW3', 'C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m', 114)" style="font-weight:bold">HW3</a> (<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW3\HW3.m',114,0)">line 114</a>)] 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'solver_stopped_premature','CSHelpWindow');">Solver stopped prematurely</a>.
+
+lsqnonlin stopped because it exceeded the function evaluation limit,
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'max_fun_evals','CSHelpWindow');">options.MaxFunctionEvaluations</a> = 1200 (the default value).
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
+ 
+Exiting: Maximum number of function evaluations has been exceeded
+         - increase MaxFunEvals option.
+         Current function value: -Inf 
+
