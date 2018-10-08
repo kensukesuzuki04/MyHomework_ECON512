@@ -375,18 +375,16 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 
 
 %%%%%%%%%%%%%%%%%%%%%%
-\section*{Problem 1}
+\section*{Problem 1: MLE with Nelder-Mead}
 
 First define the function \code{TobitLLF.m} which gives the (negative of) log likelihood for given vector of $\beta$, $\vect{X}$ and $\vect{y}$.
 
 
 \lstinputlisting{TobitLLF.m}
 
-Given the vector of $\vect{X}$ and $\vect{y}$, we re-define anonymous function of $\beta$ which we will minimize with respect to the vector of $\beta$.
+Given the vector of $\vect{X}$ and $\vect{y}$ (data), we re-define anonymous function of $\beta$ which we will minimize.
 
-In the first question, we use the Nelder-Mead method. Following the course material, we use the build-in optimizer \code{fminsearch}. 
-
-For the initial value, we use $\beta_0 = \lprn{\log\frac{\sum_i y_i}{n},0,0,0,0,0}^\top$. Optimization algorithm yields the MLE estimates:
+In the first question, we use the Nelder-Mead method. Following the course material, we use the build-in optimizer \code{fminsearch}. For the initial value, we use $\beta_0 = \lprn{\log\frac{\sum_i y_i}{n},0,0,0,0,0}^\top$. Optimization algorithm yields the MLE estimates:
 
 \begin{align*}
 \beta = \lprn{
@@ -408,10 +406,13 @@ The figure below shows the function values along the iteration.
 \end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%
-\section*{Problem 2}
+\section*{Problem 2: MLE with Quasi-Newton}
 
-In this question, we use the build-in optimizer \code{fminunc}, where the default algorithm is quasi-Newton method. The algorithm found the local minimum as the size of the gradient is less than the tolerance. Estimated MLE estimates are:
+In this question, we use the build-in optimizer \code{fminunc}. We define the function \code{TobitLLF\_grad.m} which returns the function value (negative of log likelihood) and gradient. 
 
+\lstinputlisting{TobitLLF_grad.m}
+
+We specify the option (\code{option1}) to use this analytical gradient when using the built-in optimizer \code{fminunc}. The algorithm found the local minimum as the size of the gradient is less than the tolerance. Estimated MLE estimates are:
 
 \begin{align*}
 \beta = \lprn{
@@ -429,37 +430,37 @@ In this question, we use the build-in optimizer \code{fminunc}, where the defaul
 The estimates are same as in the question 1.
 
 %%%%%%%%%%%%%%%%%%%%%%
-\section*{Problem 3}
+\section*{Problem 3: NLS with lsqnonlin}
 
-We now define the function returning the (negative of) sum of squared residuals, \code{NlsRSS}.
+We now define the function returning the sum of squared residuals, \code{NlsRSS}.
 
 
 \lstinputlisting{NlsRSS.m}
 
-Given vector of $\vec{X}$ and $\vect{y}$, we define the anonymous function of $\beta$ which we minimize. 
-
-We use the same initial value for $\beta$. As we discussed in the last question, the estimates are greatly affected by the initial guess.
+Given vector of $\vect{X}$ and $\vect{y}$, we define the anonymous function of $\beta$ which we minimize. 
 
 
-For this question, we use the built-in optimizer \code{lsqnonlin}. The results are:
+
+
+We use the built-in optimizer \code{lsqnonlin}. We use the same initial value for $\beta$. As we discussed in the last question, the estimates are greatly affected by the initial guess. Since the default values for the maximum function evaluation (\code{MaxFunctionEvaluations}) and the maximum iteration (\code{MaxIterations}) are not enough for finding the minimum, we specify the option (\code{options3}) to increase these values. The results are:
 
 \begin{align*}
 \beta = 
  \lprn{
 \begin{array}{r}
-0.3755 \\
--0.0119 \\
-0.0856 \\
--0.0503 \\
-0.0187 \\
--0.0745 \\
+0.3895 \\
+-0.0146 \\
+0.1193 \\
+-0.1242 \\
+0.0770 \\
+-0.1732 \\
 \end{array}
 }
 \end{align*}
 
 
 %%%%%%%%%%%%%%%%%%%%%%
-\section*{Problem 4}
+\section*{Problem 4: NLS with Nelder-Mead}
 
 In this question, we employ the Nelder-Mead method using \code{fminsearch}. Initial value for $\beta$ is same as before. Again, as we discussed below, the results are greatly affected by the initial values. The optimization yields:
 
@@ -467,12 +468,12 @@ In this question, we employ the Nelder-Mead method using \code{fminsearch}. Init
 \beta = 
  \lprn{
 \begin{array}{r}
-345.9665 \\
-1.2039 \\
--7.8108 \\
-1.8421 \\
--0.5917 \\
-0.9241
+2.5126 \\
+-0.0384 \\
+0.1141 \\
+-0.2796 \\
+0.0676 \\
+-0.3698
 \end{array}
 }
 \end{align*}
@@ -482,22 +483,22 @@ In this question, we employ the Nelder-Mead method using \code{fminsearch}. Init
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 5}
 
-For each method, we minimizes the function value with different initial values for $\beta$ and see how the results are affected by the initial values. For here, we change the initial values for $\beta_0$ from 1 to 5 (with step 0.2) and keep $\beta_i = 0$ for $i=1,...,5$
+For each method, we minimizes the function value with different initial values for $\beta$ and see how the results are affected by the initial values. For here, we change the initial values for $\beta_0$ from 0 to 5 (with step 0.2) and keep $\beta_i = 0$ for $i=1,...,5$
 
 \subsection*{MLE with Nelder-Mead (Figure 1)}
-Figure 1 shows the estimated coefficients with different initial values for $\beta_0$. It is clear from the figure that the estimates vary substantially with different initial values. The response of estimates seems to be random to the initial values.
+We specify the option (\code{options15}) to increase the maximum function evaluations and iterations. Results are presented in Figure 1. We find that for $\beta_0\in[0.1,0.9]$, the estimates seems to be fairly stable (independent of initial values). However, they vary substantially with different initial values for $\beta_0\geq 1$. 
 
 \subsection*{MLE with Quasi-Newton (Figure 2)}
-Figure 2 is the result with Quasi-Newton method. Unlike the Nelder-Mead method, the Quasi-Newton method yields fairly stable results. It implies that the results are not substantially affected by the initial values. 
+Figure 2 is the result with Quasi-Newton method. Unlike the Nelder-Mead method, the Quasi-Newton method yields fairly stable results, i.e., the estimates are not dependent on initial values of $\beta_0$. It implies that the Quasi-Newton method are more robust than the Nelder-Mead method and it and yields the results which are independent of initial values.
 
 \subsection*{NLS with \code{lsqnonlin} (Figure 3)}
-Again the results are greatly affected by the initial values but the figure reveals (unlike the case in the Nelder-Mead presented below) linear relationship between the estimates and initial values. 
+Figure 3 demonstrates the NLS estimates using \code{lsqnonlin} optimizer with different initial values. The left y-axis is the coefficients for $\beta_0$ and the right y-axis is for the rest of the parameters. The figure reveals that the estimates are affected by the initial values of $\beta_0$. Inspection of the figure demonstrates that the estimate for $\beta_0$ is almost linear in initial value. For the rest of the estimates, not as clear as in the case of $\beta_0$, we  find that estimates are increasing or decreasing in the initial values.
 
 \subsection*{NLS with Nelder-Mead (Figure 4)}
-Finally, the figure 4 demonstrates the results for NLS with Nelder-Mead. The left y-axis is the coefficients for $\beta_0$ and the right y-axis is for the rest of the parameters.  As in Figure 1, it reveals that the initial values matter in the Nelder-Mead method. We find (in particular for $\beta_0$) mostly random fluctuation in the results with different initial values.
+Finally, the figure 4 demonstrates the results for NLS with Nelder-Mead. The left y-axis is the coefficients for $\beta_0$ and the right y-axis is for the rest of the parameters. As in Figure 1, the estimates are stable for the initial value $\beta\in[0.1,1.5]$, but they vary with different intial values for $\beta\geq1.6$ Unlike the \code{lsqnonlin} optimizer, we do not find clear linear relationship between initial guess and estimates.
 
-
-\subsection*{Discussion:}
+\subsection*{Discussion:} 
+For MLE, the Quasi-Newton method yields more robust result than the Nelder-Mead result. It would be because the Quasi-Newton method incorporates gradient of the objective function in minimizing the function value. For NLS, initial values matter in both algorithms. Still, Nelder-Mead method seems to have an interval of initial values which yields the stable estimates (this is confirmed in the case of MLE as well). 
 
 \begin{figure}
 \begin{center}
