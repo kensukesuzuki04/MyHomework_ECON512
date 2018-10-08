@@ -14,7 +14,7 @@ iter 3: p(1)=1.691933, p(2)=1.691933, norm(f(x))=0.10363413
 iter 4: p(1)=1.583549, p(2)=1.583549, norm(f(x))=0.01684145 
 iter 5: p(1)=1.598700, p(2)=1.598700, norm(f(x))=0.00026551 
 iter 6: p(1)=1.598942, p(2)=1.598942, norm(f(x))=0.00000069 
-Problem2: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.005102.
+Problem2: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.021071.
  
 iter 1: p(1)=1.000000, p(2)=1.000000, norm(f(x))=0.59724897 
 iter 2: p(1)=1.461030, p(2)=1.567682, norm(f(x))=0.12757558 
@@ -22,7 +22,7 @@ iter 3: p(1)=1.591911, p(2)=1.597363, norm(f(x))=0.00666863
 iter 4: p(1)=1.598588, p(2)=1.598862, norm(f(x))=0.00033631 
 iter 5: p(1)=1.598924, p(2)=1.598938, norm(f(x))=0.00001695 
 iter 6: p(1)=1.598941, p(2)=1.598942, norm(f(x))=0.00000129 
-Problem3: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.010942.
+Problem3: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.031539.
  
 iter 1: p(1)=1.000000, p(2)=1.000000, norm(f(x))=0.59724897 
 iter 2: p(1)=1.731059, p(2)=1.731059, norm(f(x))=0.14822896 
@@ -35,5 +35,5 @@ iter 8: p(1)=1.598967, p(2)=1.598967, norm(f(x))=0.00002809
 iter 9: p(1)=1.598936, p(2)=1.598936, norm(f(x))=0.00000675 
 iter 10: p(1)=1.598943, p(2)=1.598943, norm(f(x))=0.00000162 
 iter 11: p(1)=1.598942, p(2)=1.598942, norm(f(x))=0.00000039 
-Problem4: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.005999.
+Problem4: for vA=vB=2, equilibrium prices are: PA= 1.598942, PB= 1.598942; time elapsed is 0.013516.
  

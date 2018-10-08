@@ -7,7 +7,7 @@ diary on
 
 disp('ECON512 HOMEWORK2: Ken Suzuki')
 
-disp(' ')
+disp(' ') 
 
 %% Define bertrand and bertrandfoc function
 % bertrand: return demand for each good
