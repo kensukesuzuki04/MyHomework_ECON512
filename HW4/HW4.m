@@ -8,19 +8,23 @@
 % Number of random draw
 numsim = 10000;
 
+seed = 1534561;
+rng(seed);
+
 % Define function: pi_ind
 % returns 1 if x^2 + y^2 <= 1 and 0 otherwise
 
 % Generate random sequence for x and y using rand
-halseq = rand(numsim,2);
-x = halseq(:,1);
-y = halseq(:,2);
+seq = rand(numsim,2);
+x = seq(:,1);
+y = seq(:,2);
 
 % We now compute the sequence of values of indicator function using the
 % random sequence generated above
 pi_QMC_Q1 = pi_ind(x,y);
 
 % Compute numerical integation 
+display('Problem 1: Quasi-Monte Carlo method')
 pi_Q1 = ((1-0)*(1-0))/numsim * 4 * sum(pi_QMC_Q1)
 
 clear x y
@@ -51,6 +55,7 @@ for ind = 1:numsim
 end
 
 % Next we integrate over x by summing over with weight h
+display('Problem 2: Newton-Cotes approach')
 pi_Q2 = 4 * h * sum(pi_NC_Q2)
 
 
@@ -60,6 +65,8 @@ pi_Q2 = 4 * h * sum(pi_NC_Q2)
 % Define function: pi_root
 % returns (1-x^2)^(1/2)
 
+seed = 1534561;
+rng(seed);
 % Generate random sequence for x 
 x = rand(numsim,1);
 
@@ -68,6 +75,7 @@ x = rand(numsim,1);
 pi_QMC_Q3 = pi_root(x);
 
 % Compute numerical integation 
+display('Problem 3: Pythagorean fomula with Quasi-Monte Carlo method')
 pi_Q3 = ((1-0))/numsim * 4 * sum(pi_QMC_Q3)
 
 %% Questtion 4: Newton-Cotes approach: another functional form
@@ -86,6 +94,7 @@ end
 
 % Compute the sequence of values of the function pi_root and approximate
 % the integration
+display('Problem 3: Pythagorean fomula with Newton-Cotes method')
 pi_NC_Q4 =  4 * h * sum(pi_root(x))
 
 
@@ -101,7 +110,10 @@ realpi = pi;
 ErrQMC_200 = ones(200,3);
 for i = 1:length(numsim_list)
     numsim = numsim_list(1,i);
+    seed = 1534561;
     for sim = 1:200
+        seed = seed + sim ;
+        rng(seed);
         % comute squared residual for QMC
         x = rand(numsim,1);
         pi_QMC = pi_root(x);
@@ -110,7 +122,7 @@ for i = 1:length(numsim_list)
     clear x
 end
 % Mean squaed error is obtained as
-MErrQMC = sum(ErrQMC_200)./numsim_list
+MErrQMC = sum(ErrQMC_200)./numsim_list;
         
 
 % We then use Newton-Coates
@@ -129,4 +141,10 @@ for i = 1:length(numsim_list)
     
 end
 % Mean squaed error is obtained as
+ErrNC;
+
+display('Problem 5: Comparison')
+display('Monte-Carlo mean squared error (1000, 10000, and 100000 draws)')
+MErrQMC
+display('Newton-Cotes squared error (1000, 10000, and 100000 nodes)')
 ErrNC
