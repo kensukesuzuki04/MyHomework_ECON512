@@ -1,7 +1,14 @@
 % Empirical method HW4
 % Kensuke Suzuki
 % Penn State
-% October 19
+% October 20
+
+clear all
+delete HW4log.txt
+diary('HW4log.txt')
+diary on
+
+disp('ECON512 HOMEWORK4: Ken Suzuki')
 
 %% Questtion 1: Quasi-Monte Carlo method
 
@@ -148,3 +155,5 @@ display('Monte-Carlo mean squared error (1000, 10000, and 100000 draws)')
 MErrQMC
 display('Newton-Cotes squared error (1000, 10000, and 100000 nodes)')
 ErrNC
+
+diary off
