@@ -64,7 +64,7 @@ disp('Coeff1: [log(mean(y)),zeros(1,5)] as initial guess')
 disp('Coeff2: MLE estimator (question 1) as initial guess')
 Result_Q3 = table(Parameters, Coeff1)
 
-
+% wy do you think it is so different? did you try to find out?
 %% Problem 4: NLS with Nelder-Mead
 %options4 = optimset('MaxFunEvals', 30000, 'MaxIter', 10000);
 
