@@ -29,6 +29,7 @@ y = seq(:,2);
 
 % We now compute the sequence of values of indicator function using the
 % random sequence generated above
+% You didn't need a function for that, it is slow, check answer key. 
 pi_QMC_Q1 = pi_ind(x,y);
 
 % Compute numerical integation 
@@ -55,6 +56,7 @@ end
 % Compute the sequence of values of indicator function for given x_j
 % and sum over with weight h, which yields the approximation of integration
 % over y (for iven x_j)
+% I am not sure that is the right implementation of the NC
 pi_NC_Q2 = ones(numsim,1);
 for ind = 1:numsim
     x_1 = x(ind,1)*ones(numsim,1);
