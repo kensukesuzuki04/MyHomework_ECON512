@@ -1,0 +1,8 @@
+function fval = logLFGQ(betanot,gamma,X,Y,Z,sigmab, node)
+[x,w] = qnwnorm(node, betanot, sigmab);
+u=0;
+for i = 1:length(x)
+    betai = x(i,1):
+    val1(i,:) = logLFi(betai, gamma, u, X, Y, Z);
+    fval() = sum(val1);
+end
