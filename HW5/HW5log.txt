@@ -1,0 +1,44 @@
+Problem 1
+Gaussian Quadrature
+Loglikelihood is
+  -1.2571e+03
+
+Problem 2
+Monte Carlo
+Loglikelihood is
+  -1.2571e+03
+
+Problem 3-1 (Gaussian Quadrature)
+Initial guesses are
+   gamma      beta     sigmab
+     1     1     1
+
+   gamma      beta     sigmab
+   -0.5056    2.4832    1.4054
+
+Maximized log-likelihood is:
+ -536.2378
+
+Problem 3-2 (Monte Carlo)
+Initial guesses are
+   gamma      beta     sigmab
+     1     1     1
+
+   gamma      beta     sigmab
+   -0.5056    2.5578    1.1816
+
+Maximized log-likelihood is:
+ -536.5876
+
+Problem 4 (Monte Carlo)
+Initial guesses are
+   gamma      betanot   sigmab    unot      sigmaub   sigmau
+    1.0000    1.0000    1.0000    1.0000    0.5000    1.0000
+
+Estimated parameters
+   gamma      betanot   sigmab    unot      sigmaub   sigmau
+   -0.6815    3.1877    1.9226    1.4710    0.8068    1.6458
+
+Maximized log-likelihood is:
+ -464.0001
+

@@ -3,6 +3,9 @@
 % kxs974@psu.edu 
 
 clear all
+delete HW5log.txt
+diary('HW5log.txt')
+diary on
 
 % Load Data
 load('hw5.mat')
@@ -94,6 +97,9 @@ lfMC = -1 * lfMC;
 
 % display result
 disp('Problem 3-1 (Gaussian Quadrature)')
+disp('Initial guesses are')
+disp('   gamma      beta     sigmab')
+disp([1 1 1])
 disp('   gamma      beta     sigmab')
 disp(paraGQ)
 disp('Maximized log-likelihood is:')
@@ -102,6 +108,9 @@ disp(lfGQ)
 
 % display result
 disp('Problem 3-2 (Monte Carlo)')
+disp('Initial guesses are')
+disp('   gamma      beta     sigmab')
+disp([1 1 1])
 disp('   gamma      beta     sigmab')
 disp(paraMC)
 disp('Maximized log-likelihood is:')
@@ -134,7 +143,13 @@ lfMC = -1 * lfMC;
 
 % display result
 disp('Problem 4 (Monte Carlo)')
+disp('Initial guesses are')
+disp('   gamma      betanot   sigmab    unot      sigmaub   sigmau')
+disp(intpar)
+disp('Estimated parameters')
 disp('   gamma      betanot   sigmab    unot      sigmaub   sigmau')
 disp(paraMC)
 disp('Maximized log-likelihood is:')
 disp(lfMC)
+
+diary off
