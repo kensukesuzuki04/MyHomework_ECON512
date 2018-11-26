@@ -8,13 +8,36 @@ Monte Carlo
 Loglikelihood is
   -1.2571e+03
 
+
+b =
+
+     0
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_poss_with_constr','CSHelpWindow');">Local minimum possible. Constraints satisfied</a>.
+
+fmincon stopped because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'norm_curr_step_simple_fminconip','CSHelpWindow');">size of the current step</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'step_size_tol','CSHelpWindow');">step size tolerance</a> and constraints are 
+satisfied to within the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'constraint_tolerance','CSHelpWindow');">constraint tolerance</a>.
+
+<<a href = "matlab: createExitMsg('barrier',2.000000e+00,true,true,'fmincon',5.770665e-11,'default',1.000000e-10,0.000000e+00,'default',1.000000e-06,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_poss_with_constr','CSHelpWindow');">Local minimum possible. Constraints satisfied</a>.
+
+fmincon stopped because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'norm_curr_step_simple_fminconip','CSHelpWindow');">size of the current step</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'step_size_tol','CSHelpWindow');">step size tolerance</a> and constraints are 
+satisfied to within the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'constraint_tolerance','CSHelpWindow');">constraint tolerance</a>.
+
+<<a href = "matlab: createExitMsg('barrier',2.000000e+00,true,true,'fmincon',5.718798e-11,'default',1.000000e-10,0.000000e+00,'default',1.000000e-06,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
 Problem 3-1 (Gaussian Quadrature)
 Initial guesses are
    gamma      beta     sigmab
      1     1     1
 
    gamma      beta     sigmab
-   -0.5056    2.4832    1.4054
+   -0.5056    2.4832    1.4055
 
 Maximized log-likelihood is:
  -536.2378
@@ -25,19 +48,28 @@ Initial guesses are
      1     1     1
 
    gamma      beta     sigmab
-   -0.5056    2.5578    1.1816
+   -0.5056    2.5579    1.1816
 
 Maximized log-likelihood is:
  -536.5876
 
+
+<a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'local_min_poss_with_constr','CSHelpWindow');">Local minimum possible. Constraints satisfied</a>.
+
+fmincon stopped because the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'norm_curr_step_simple_fminconip','CSHelpWindow');">size of the current step</a> is less than
+the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'step_size_tol','CSHelpWindow');">step size tolerance</a> and constraints are 
+satisfied to within the default value of the <a href = "matlab: helpview([docroot '/toolbox/optim/msg_csh/optim_msg_csh.map'],'constraint_tolerance','CSHelpWindow');">constraint tolerance</a>.
+
+<<a href = "matlab: createExitMsg('barrier',2.000000e+00,true,true,'fmincon',7.979336e-11,'default',1.000000e-10,0.000000e+00,'default',1.000000e-06,0.000000e+00,'',0.000000e+00);">stopping criteria details</a>>
+
 Problem 4 (Monte Carlo)
 Initial guesses are
-   gamma      betanot   sigmab    unot      sigmaub   sigmau
-    1.0000    1.0000    1.0000    1.0000    0.5000    1.0000
+   gamma      betanot   sigmab    unot      rho   sigmau
+   -0.5056    2.5579    1.1816    1.0000    0.9783    1.0000
 
 Estimated parameters
    gamma      betanot   sigmab    unot      sigmaub   sigmau
-   -0.6815    3.1877    1.9226    1.4710    0.8068    1.6458
+   -0.6815    3.1877    1.9225    1.4710    0.8068    1.6457
 
 Maximized log-likelihood is:
  -464.0001
