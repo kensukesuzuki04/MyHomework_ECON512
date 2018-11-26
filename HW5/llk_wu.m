@@ -5,9 +5,11 @@ gamma = par(1);
 betanot = par(2);
 sigmab = par(3);
 unot = par(4);
-sigmaub = par(5);
+%sigmaub = par(5);
+rho = par(5);
 sigmau = par(6);
 
+sigmaub = sigmab^(1/2) * sigmau^(1/2) * rho;
 
 mu = [betanot unot];
 Sigma = [sigmab sigmaub; sigmaub sigmau];

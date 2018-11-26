@@ -77,8 +77,14 @@ method = 1;
 % define function to be minimzied (function of par)
 llkwou_min = @(par) llk_wou(Y,X,Z,par,node,method);
 
-% fminsearch
-[paraGQ, lfGQ] = fminsearch(llkwou_min, [1 1 1] );
+% fmincon
+
+% for constraint
+A = [0, 0, -1];
+b = 0
+
+%[paraGQ, lfGQ] = fminsearch(llkwou_min, [1 1 1] );
+[paraGQ, lfGQ] = fmincon(llkwou_min, [1; 1; 1], A, b );
 lfGQ = -1 * lfGQ;
 
 % number of node
@@ -91,7 +97,7 @@ method = 2;
 llkwou_min = @(par) llk_wou(Y,X,Z,par,node,method);
 
 % fminsearch
-[paraMC, lfMC] = fminsearch(llkwou_min, [1 1 1] );
+[paraMC, lfMC] = fmincon(llkwou_min, [1; 1; 1], A, b );
 lfMC = -1 * lfMC;
 
 
@@ -101,7 +107,7 @@ disp('Initial guesses are')
 disp('   gamma      beta     sigmab')
 disp([1 1 1])
 disp('   gamma      beta     sigmab')
-disp(paraGQ)
+disp(paraGQ')
 disp('Maximized log-likelihood is:')
 disp(lfGQ)
 
@@ -112,12 +118,15 @@ disp('Initial guesses are')
 disp('   gamma      beta     sigmab')
 disp([1 1 1])
 disp('   gamma      beta     sigmab')
-disp(paraMC)
+disp(paraMC')
 disp('Maximized log-likelihood is:')
 disp(lfMC)
 
 
 %% Problem 4
+
+clear A 
+clear b
 
 % method: MC
 method = 2;
@@ -126,29 +135,47 @@ method = 2;
 node = 100;
 
 % initial values for parameter vector
-gamma = 1;
-betanot = 1;
-sigmab = 1;
+gamma = -0.5056;
+betanot = 2.5579;
+sigmab = 1.1816;
 unot = 1;
-sigmaub = 0.5;
+%sigmaub = 0.9;
+rho = 0.9;
 sigmau =1;
-intpar = [gamma betanot sigmab unot sigmaub sigmau];
+%intpar = [gamma betanot sigmab unot sigmaub sigmau];
+intpar = [gamma betanot sigmab unot rho sigmau];
 
 %define function to be minimized
 llkwu_min = @(par) llk_wu(Y,X,Z,par,node,method);
 
-% fminsearch
-[paraMC, lfMC] = fminsearch(llkwu_min, intpar );
+% for constraint
+A = [0 0 -1 0 0  0 ; ...
+     0 0  0 0 0 -1; ...
+     0 0  0 0 -1 0; ...
+     0 0  0 0  1 0];
+b = [0; 0;  1; 1];
+
+% fmincon
+[paraMC, lfMC] = fmincon(llkwu_min, intpar', A, b );
+
+sigmaub = paraMC(3)^(1/2) * paraMC(6)^(1/2) * paraMC(5);
+paraMC_cov = paraMC;
+paraMC_cov(5) = sigmaub;
+
+sigmaubint = intpar(3)^(1/2) * intpar(6)^(1/2) *intpar(5);
+intpar_cov = intpar;
+intpar_cov(5) = sigmaubint ;
+
 lfMC = -1 * lfMC;
 
 % display result
 disp('Problem 4 (Monte Carlo)')
 disp('Initial guesses are')
-disp('   gamma      betanot   sigmab    unot      sigmaub   sigmau')
-disp(intpar)
+disp('   gamma      betanot   sigmab    unot      rho   sigmau')
+disp(intpar_cov)
 disp('Estimated parameters')
 disp('   gamma      betanot   sigmab    unot      sigmaub   sigmau')
-disp(paraMC)
+disp(paraMC_cov')
 disp('Maximized log-likelihood is:')
 disp(lfMC)
 
