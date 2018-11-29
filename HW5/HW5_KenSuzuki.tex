@@ -379,21 +379,21 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 1: Gaussian Quadrature}
 
-In this problem, we rule out $u_i$ from the model. Define the function \code{llk\_wou(Y,X,Z,par,node,method)} which returns (negative of) the log likelihood, given data (\code{X}, \code{Y}, and \code{Z}), parameter vector (\code{par}), number of node (\code{node}), and specified integration method (\code{method}). 
+In this problem, I rule out $u_i$ from the model. Define the function \code{llk\_wou(Y,X,Z,par,node,method)} which returns (negative of) the log likelihood, given data (\code{X}, \code{Y}, and \code{Z}), parameter vector (\code{par}), number of node (\code{node}), and specified integration method (\code{method}). 
 
-In the first problem, I use the Gaussian quadrature method; \code{method=1} with 20 nodes. Using \code{qnwnorm( )} included in the CEtools, we draw 20 nodes for $\beta_i$ from the normal distribution with mean $\beta_0$ and variance $\sigma_\beta^2$. This also generates the weighting vector $\vect{w}$ which I use later. I pick each draw of $\beta_i$, compute the the likelihood for each $i$, $L_i(\gamma|\beta_i,u_i)$, and stack it up for all draws. Numerical integration is completed by calculating the weighted average of the likelihood  using the weights obtained above. Finally take log and sum over all $i$. \textcolor{red}{Log likelihood is $-1.2571e+03$.}
+In the first problem, I use the Gaussian quadrature method; \code{method=1} with 20 nodes. Using \code{qnwnorm( )} included in the CEtools, I draw 20 nodes for $\beta_i$ from the normal distribution with mean $\beta_0$ and variance $\sigma_\beta^2$. This also generates the weighting vector $\vect{w}$ which I use later. I pick each draw of $\beta_i$, compute the the likelihood for each $i$, $L_i(\gamma|\beta_i,u_i)$, and stack it up for all draws. Numerical integration is completed by calculating the weighted average of the likelihood  using the weights obtained above. Finally take log and sum over all $i$. \textcolor{red}{Log likelihood is $-1.2571e+03$.}
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 2: Monte Carlo}
 
 
-In the second problem, I use the Monte Carlo method; \code{method=2} with 100 nodes. I draw 100 nodes using \code{haltonNormshuddle( )} provided in the lecture. Analogous to the first problem, for each draw, we compute the likelihood  $L_i(\gamma|\beta_i,u_i)$, stack it up for all draws, and compute the simple average. Finally take log and sum over all $i$. \textcolor{red}{Log likelihood is $-1.2571e+03$.}
+In the second problem, I use the Monte Carlo method; \code{method=2} with 100 nodes. I draw 100 nodes using \code{haltonNormshuddle( )} provided in the lecture. Analogous to the first problem, for each draw, I compute the likelihood  $L_i(\gamma|\beta_i,u_i)$, stack it up for all draws, and compute the simple average. Finally take log and sum over all $i$. \textcolor{red}{Log likelihood is $-1.2571e+03$.}
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 3: MLE without $u_i$ using \code{fmincon}}
 
 
-We use \code{fmincon} to estimate the parameters. Let parameter vector $\vect{\theta} = \bmat{\gamma_0 & \beta_0 & \sigma_\beta^2}'$. We need to impose the parameter restrictions such that $\sigma_\beta^2\geq0$. We define $\vect{A}=\bmat{0 & 0 & -1}$ and $b=0$. When minimizing the negative of the log likelihood over the parameter vector $\vect{\theta}$, we constraint $\vect{A}\vect{\theta} \leq b$.  Results are presented below:
+We use \code{fmincon} to estimate the parameters. Let parameter vector $\vect{\theta} = \bmat{\gamma_0 & \beta_0 & \sigma_\beta^2}'$. We need to impose the parameter restrictions such that $\sigma_\beta^2\geq0$. We define $\vect{A}=\bmat{0 & 0 & -1}$ and $b=0$. When minimizing the negative of the log likelihood over the parameter vector $\vect{\theta}$, I have a constraint $\vect{A}\vect{\theta} \leq b$.  Results are presented below:
 
 \subsection*{Gaussian Quadrature}
 \begin{align*}
@@ -417,13 +417,13 @@ We use \code{fmincon} to estimate the parameters. Let parameter vector $\vect{\t
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 4: MLE of full model using \code{fmincon}}
 
-In this problem, we estimate the full model. Define the function \code{llk\_wu(Y,X,Z,par,node,method)} which returns (negative of) the log likelihood of the full model, given data (\code{X}, \code{Y}, and \code{Z}), parameter vector (\code{par}), number of node (\code{node}), and specified integration method (\code{method}). Since we only invoke Monte Carlo method, \code{method=2}.  
+In this problem, I estimate the full model. Define the function \code{llk\_wu(Y,X,Z,par,node,method)} which returns (negative of) the log likelihood of the full model, given data (\code{X}, \code{Y}, and \code{Z}), parameter vector (\code{par}), number of node (\code{node}), and specified integration method (\code{method}). Since I only invoke Monte Carlo method, \code{method=2}.  
 
 In this function, I draw 100 nodes using \code{haltonNormshuddle( )}. For this time, I draw $\beta_i$ and $u_i$ from the bivariate normal distribution with mean $\mu=\bmat{\beta_0, u_0}'$ and variance-covariance matrix $\Sigma = \bmat{\sigma_\beta & \sigma_{u\beta} \\ \sigma_{u\beta} & \sigma_{u}}$. I use \code{chol( )} to make Cholesky decomposition of $\Sigma$ to simulate from the joint distribution---bivariate normal. Implementation of numerical integration is same as in Problem 2.
 
-For optimization, we use \code{fmincon}. In addition to the nonnegative restrictions on variances, $\sigma_\beta^2$ and $\sigma_u^2$, we need to restrict the variance-covariance matrix $\Sigma$ to be positive definite. Therefore, rather than optimizing over $\sigma_{u\beta}$, we optimize over the correlation coefficient $\rho$ with restriction $-1\leq\rho\leq1$ and recover $\sigma_{ub} = \rho \sqrt{\sigma_\beta^2}\sqrt{\sigma_u^2}$. 
+For optimization, I use \code{fmincon}. In addition to the nonnegative restrictions on variances, $\sigma_\beta^2$ and $\sigma_u^2$, I need to restrict the variance-covariance matrix $\Sigma$ to be positive definite. Therefore, rather than optimizing over $\sigma_{u\beta}$, I optimize over the correlation coefficient $\rho$ with restriction $-1\leq\rho\leq1$ and recover $\sigma_{ub} = \rho \sqrt{\sigma_\beta^2}\sqrt{\sigma_u^2}$. As I have learned in the lecture, I may constrain $\rho$ by imposing upper and lower bound. But since there is no special reason here, I simply write the constraint by linear equation.
 
-Parameter vector over which we optimize is $\vect{\theta}=\bmat{\gamma_0 & \beta_0 & u_0 & \sigma_\beta^2 & \rho & \sigma_u^2 }$. Constraints can be expressed by $\vect{A}\vect{\theta}\leq\vect{b}$ where
+Parameter vector over which I optimize is $\vect{\theta}=\bmat{\gamma_0 & \beta_0 & u_0 & \sigma_\beta^2 & \rho & \sigma_u^2 }$. Constraints can be expressed by $\vect{A}\vect{\theta}\leq\vect{b}$ where
 
 \begin{align*}
 \vect{A} = \bmat{ 	0 & 0 & -1 & 0 & 0 & 0 \\
@@ -433,7 +433,7 @@ Parameter vector over which we optimize is $\vect{\theta}=\bmat{\gamma_0 & \beta
 \vect{b} = \bmat{0\\ 0 \\ 1 \\ 1 }
 \end{align*}
 
-
+I will present the initial values and estimated values for $\sigma_{u\beta}$ which is recovered from the ones for $\rho$. Our initial guess on $\rho$ is 0.9 and estimated values are $\hat{\rho} = 0.4536$.
 
 \begin{align*}
 \text{Initial guess: }
@@ -445,7 +445,6 @@ Parameter vector over which we optimize is $\vect{\theta}=\bmat{\gamma_0 & \beta
 \text{loglikelihood: }-464.0001
 \end{align*}
 
-In Matlab ode, our initial guess on $\rho$ is 0.9 and $\hat{\rho} = 0.4536$.
 
 \subsection*{Matlab function \code{llk\_wu( )}}
 \lstinputlisting{llk_wu.m}
