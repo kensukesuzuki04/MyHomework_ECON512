@@ -171,7 +171,7 @@ lfMC = -1 * lfMC;
 % display result
 disp('Problem 4 (Monte Carlo)')
 disp('Initial guesses are')
-disp('   gamma      betanot   sigmab    unot      rho   sigmau')
+disp('   gamma      betanot   sigmab    unot      sigmaub   sigmau')
 disp(intpar_cov)
 disp('Estimated parameters')
 disp('   gamma      betanot   sigmab    unot      sigmaub   sigmau')
