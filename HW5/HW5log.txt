@@ -64,7 +64,7 @@ satisfied to within the default value of the <a href = "matlab: helpview([docroo
 
 Problem 4 (Monte Carlo)
 Initial guesses are
-   gamma      betanot   sigmab    unot      rho   sigmau
+   gamma      betanot   sigmab    unot      sigmaub   sigmau
    -0.5056    2.5579    1.1816    1.0000    0.9783    1.0000
 
 Estimated parameters
