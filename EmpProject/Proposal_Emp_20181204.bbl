@@ -1,0 +1,37 @@
+\ifx\undefined\bysame
+\newcommand{\bysame}{\leavevmode\hbox to\leftmargin{\hrulefill\,\,}}
+\fi
+\begin{thebibliography}{xx}
+
+\harvarditem[Aw et al.]{Aw, Roberts and Xu}{2011}{Aw2011}
+{\bf Aw, Bee~Yan, Mark~J Roberts, and Daniel~Yi Xu}, ``{R{\&}D Investment,
+  Exporting, and Productivity Dynamics},'' {\it American Economic Review},
+  2011, {\it 101} (4), 1312--1344.
+
+\harvarditem[Bai et al.]{Bai, Krishna and Ma}{2017}{Bai2017}
+{\bf Bai, Xue, Kala Krishna, and Hong Ma}, ``{How you export matters: Export
+  mode, learning and productivity in China},'' {\it Journal of International
+  Economics}, 2017, {\it 104}, 122--137.
+
+\harvarditem[Bernard et al.]{Bernard, Jensen, Redding and
+  Schott}{2012}{Bernard2012}
+{\bf Bernard, Andrew~B., J.~Bradford Jensen, Stephen~J. Redding, and Peter~K.
+  Schott}, ``{The Empirics of Firm Heterogeneity and International Trade},''
+  {\it Annual Review of Economics}, 2012, {\it 4} (1), 283--313.
+
+\harvarditem[Kasahara and Rodrigue]{Kasahara and Rodrigue}{2008}{Kasahara2008}
+{\bf Kasahara, Hiroyuki and Joel Rodrigue}, ``{Does the use of imported
+  intermediates increase productivity? Plant-level evidence},'' {\it Journal of
+  Development Economics}, 2008, {\it 87} (1), 106--118.
+
+\harvarditem[Levinsohn and Petrin]{Levinsohn and Petrin}{2003}{Levinsohn2003}
+{\bf Levinsohn, James and Amil Petrin}, ``{Estimating Production Funct Using
+  Inputs to Control for Unobservables},'' {\it Review of Economic Studies},
+  2003, {\it 70} (70), 317--341.
+
+\harvarditem[Melitz]{Melitz}{2003}{Melitz2003}
+{\bf Melitz, Marc~J}, ``{The Impact of Trade on Intra-Industry Reallocations
+  and Aggregate Industry Productivity},'' {\it Econometrica}, 2003, {\it 71}
+  (6), 1695--1725.
+
+\end{thebibliography}
