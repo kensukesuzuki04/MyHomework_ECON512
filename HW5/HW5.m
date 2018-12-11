@@ -51,6 +51,7 @@ method = 2;
 
 % number of nodes
 node = 100;
+% typically you need to use many more nodes.
 
 % set parameter vector
 par = [gamma betanot sigmab];
@@ -76,7 +77,8 @@ method = 1;
 
 % define function to be minimzied (function of par)
 llkwou_min = @(par) llk_wou(Y,X,Z,par,node,method);
-
+% take a look at the answer key to see how you can use the same likelihood
+% function, but inpose constraints on fmincon. 
 % fmincon
 
 % for constraint
