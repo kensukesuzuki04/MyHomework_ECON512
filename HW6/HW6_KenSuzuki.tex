@@ -388,22 +388,24 @@ Firm's current period payoff is
 We want to make the stock of lumber as a state variable, so that $x=k-k'$.  Then equation (1) can be written as
 
 \begin{align}
-\pi(k_t,k_{t+1},p_t) = p \cdot (k_{t+1}-k_t) - 0.2 \cdot (k_{t+1}-k_t)^{1.5}
+\pi(k_t,k_{t+1},p_t) = p \cdot (k_{t}-k_{t+1}) - 0.2 \cdot (k_{t}-k_{t+1})^{1.5}
 \end{align}
 
 Then we can formulate the firm's problem such that it chooses $k'$ (next period stock) given the state variables $(k,p)$. The Bellman's equation is
 
 \begin{align}
-V(k,p) = \max_{k'}  p \cdot (k'-k) - 0.2 \cdot (k'-k)^{1.5} + \delta \mathbb{E}_{p'}\lprn{V(k',p')|p}
+V(k,p) = \max_{k'}  p \cdot (k-k') - 0.2 \cdot (k-k')^{1.5} + \delta \mathbb{E}_{p'}\lprn{V(k',p')|p}
 \end{align}
 
 given initial stock of lumber (between 0 and 100) and transition probability of $p$ which is defined by the AR(1) process ($p'= p_0 + \rho\cdot p + u$). In the Bellman's equation presented in equation (2), expectation is taken over next period price $p'$ given today's price $p$.
+
 
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 2: Tauchen}
 
 I use \code{tauchen.m} to generate grid that approximate process for $p_t$ for given AR(1) parameters. Variable \code{grid} stores the grid points for $p_t$ and \code{prob} stores the transition probabilities.
 
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%
 \section*{Problem 3: Value function iteration (VIF)}
 
@@ -438,31 +440,35 @@ I plot next period optimal stock as a function of today's price for different am
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%
-\section*{Problem 5: Expected stock}
+\section*{Problem 5: Expected path of lumber stock}
 
-I compute the expected path in the following way.
 
-\begin{enumerate}
-\item Simulate the path of price for 20 period ($p_t$ for $t\in[1,20]$), given $p_0=1$, as follows.
-\begin{itemize}
-\item Using the transition probability matrix, compute the \textit{cumulative probability} for given current period price ($p_{t}$). \code{cdf} is the vector where $i$th element stores $cdf_i = \sum_{j=1}^i = \pi(p_j | p_{t})$.
-\item Draw a uniform random variable $r\in[0,1]$ using \code{rand} and find the smallest index $i$ such that $cdf_i>r$. Then set the next priod price as $p_{t+1}=p_i$. 
-\end{itemize}
-\item Using the path of price obtained in Step 1, we can compute the path of lumber stock. Next period lumber stock is determined by the decision rule which is obtained in Problem 3 above. Denote the path of lumber stock obtained in this step by $k_t^s$ for $t=1,2,...,20$. $s$ is the index of the simulation, which is explained below.
-\item Repeat the Step 1--2 for $S=1000$ times, $s=1,2,...,S$. Expected lumber stock is computed as the sample average of $k_t^s$: $\overline{k}_t = \frac{1}{S}\sum_{s=1}^{S} k_t^s$.
+Using the code provided in the class, I first construct the transition probability matrix of the state ($k,p$) by combining the transition matrix of price and the decision rule matrix. Given the initial state ($k=100,p=1$), we can construct the initial probability distribution matrix, which has a mass (1) on $k=100$ and $p=1$. Then, using the transition matrix of the state, we can generate the next period probability distribution over state ($k,p$). By integrating (summing) over all possible price values, we can obtain the expected lumber stock. We can also obtain the lower and upper bound of confidence interval by obtaining 5\% and 95\%tile of the marginal distribution of $k$ in each period. We repeat this for 20 periods. In the figure below, $t=1$ is the starting point, so we compute the expected path and the confidence interval from $t=2$ to $t=21$.
 
-Confidence interval is obtained by
-\begin{align*}
-\overline{k}_t - t_{0.05}(S-1)\frac{SD_t}{\sqrt{S}}<\Exp{k_t}<\overline{k}_t + t_{0.05}(S-1)\frac{SD_t}{\sqrt{S}}
-\end{align*}
-where $t_{0.05}(S-1)$ and $t_{0.95}(S-1)$, respectively, are 5\%tile and 95\%tile of $t$-distribution with degree of freedom $S-1$. $std_t$ is the standard deviation of $k_t^s$: $SD_t= \sqrt{\frac{1}{S-1}\sum_{s=1}^S\abs{k_t^s-\overline{k}_t}}$. 
-\end{enumerate}
+%
+%I compute the expected path in the following way.
+%
+%\begin{enumerate}
+%\item Simulate the path of price for 20 period ($p_t$ for $t\in[1,20]$), given $p_0=1$, as follows.
+%\begin{itemize}
+%\item Using the transition probability matrix, compute the \textit{cumulative probability} for given current period price ($p_{t}$). \code{cdf} is the vector where $i$th element stores $cdf_i = \sum_{j=1}^i = \pi(p_j | p_{t})$.
+%\item Draw a uniform random variable $r\in[0,1]$ using \code{rand} and find the smallest index $i$ such that $cdf_i>r$. Then set the next priod price as $p_{t+1}=p_i$. 
+%\end{itemize}
+%\item Using the path of price obtained in Step 1, we can compute the path of lumber stock. Next period lumber stock is determined by the decision rule which is obtained in Problem 3 above. Denote the path of lumber stock obtained in this step by $k_t^s$ for $t=1,2,...,20$. $s$ is the index of the simulation, which is explained below.
+%\item Repeat the Step 1--2 for $S=1000$ times, $s=1,2,...,S$. Expected lumber stock is computed as the sample average of $k_t^s$: $\overline{k}_t = \frac{1}{S}\sum_{s=1}^{S} k_t^s$.
+%
+%Confidence interval is obtained by
+%\begin{align*}
+%\overline{k}_t - t_{0.05}(S-1)\frac{SD_t}{\sqrt{S}}<\Exp{k_t}<\overline{k}_t + t_{0.05}(S-1)\frac{SD_t}{\sqrt{S}}
+%\end{align*}
+%where $t_{0.05}(S-1)$ and $t_{0.95}(S-1)$, respectively, are 5\%tile and 95\%tile of $t$-distribution with degree of freedom $S-1$. $std_t$ is the standard deviation of $k_t^s$: $SD_t= \sqrt{\frac{1}{S-1}\sum_{s=1}^S\abs{k_t^s-\overline{k}_t}}$. 
+%\end{enumerate}
 
 
 \begin{figure}[h]
 \begin{center}
 \caption{Problem 5}
-\includegraphics[width=0.7\textwidth]{prob5.png}
+\includegraphics[width=0.7\textwidth]{prob5_2.png}
 \end{center}
 \end{figure}
 
@@ -473,7 +479,7 @@ where $t_{0.05}(S-1)$ and $t_{0.95}(S-1)$, respectively, are 5\%tile and 95\%til
 \section*{Problem 6: Results with coarse grid}
 
 \subsection*{Problem 6-2: Tauchen}
-I know use 5 grid points and generate the grid and transition probability for $p_t$.
+I now use 5 grid points and generate the grid and transition probability for $p_t$.
 
 \subsection*{Problem 6-3: VIF}
 \begin{figure}[h]
@@ -497,7 +503,7 @@ I know use 5 grid points and generate the grid and transition probability for $p
 \begin{figure}[h]
 \begin{center}
 \caption{Problem 6-5}
-\includegraphics[width=0.7\textwidth]{prob6_3.png}
+\includegraphics[width=0.7\textwidth]{prob6_3_2.png}
 \end{center}
 \end{figure}
 

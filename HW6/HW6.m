@@ -53,7 +53,7 @@ while diff > 1e-6
         [vrevised(i,:),decision(i,:)] = max( pi + delta*Ev ); % get value and policy function
         decision;
     end
-    diff = norm(vrevised - vinitial) / norm(vrevised); % check deviance
+    diff = norm(vrevised - vinitial) / norm(vrevised) % check deviance
     vinitial = vrevised;
     
 end
@@ -92,50 +92,56 @@ saveas(gcf,'prob4.png')
 
 %% Problem 5 Expected path
 
+
 T = 21; % time period
 Time = 1:T;
-sim = 1000; % number of simulation
 
-path_p = zeros(sim,T); 
-path_p(:,1) = 11;
+% Construct transition matrix
+P=zeros(Z*N,Z*N);
 
-% generate the price path (20 period)  1000 times
-for s = 1:1000
-    for i = 2:21
-        rng(s * 2019 + i );
-        pmf = prob(path_p(s,i-1),:);
-        cdf = cumsum(pmf);
-        r = rand;
-        path_p(s,i) = find(cdf>r,1);
+for i=1:Z
+    for j=1:Z
+        P((i-1)*N+1:i*N,(j-1)*N+1:j*N)=prob(i,j)*(kron(ones(1,N),drule(:,i))==kron(ones(N,1),k));
     end
 end
 
-% generate the lumber stock path
-path_k = zeros(sim,T);
-path_k(:,1) = 101; % this is index
-path_stock = zeros(sim,T);
-path_stock(:,1) = 100;
+% transition probability: p=1 and k = 100 (initial)
+pint = zeros(1,N*Z); % 11 is index of p=1
+pint(1,11*101)=1; % since period 1 state is (1,100), mass is 1 on
 
-for s = 1:1000
-    for i = 2:21
-        path_k(s,i) = decision(path_k(s,i-1), path_p(s,i-1));
-        path_stock(s,i) = k(path_k(s,i));
+% Simulate the model
+result = zeros(3,T);
+result(:,1) =[100;100;100];  
+for t=2:21
+    pnext = pint*P; % next period probability (1 x Z*N)
+    
+    probk=zeros(N,Z); % generate probability distribution for stock
+    for i=1:Z
+        probk(:,i) = pnext((i-1)*N+1:i*N)';
     end
+    probk = sum(probk'); % summing over for all price
+    
+    cdf = cumsum(probk); % get cdf
+    
+    lowerind = max(find(cdf<=0.05)); % get 5-percentile index
+    upperind = min(find(cdf>=0.95)); % get 95-percentile index
+    
+    mean = probk*k';
+    
+    LB = k(lowerind); % lower bound
+    UB = k(upperind);
+    
+    result(:,t) = [LB mean UB]; % store result
+    
+    pint = pnext; % update today's distirbution 
 end
 
-mean = mean(path_stock);
-stderr = std(path_stock);   
-ts = tinv([0.05  0.95],length(path_stock-1))';
-
-CI = ones(2,1)*mean + ts*stderr/sqrt(length(path_stock)) ;
-
-plot(Time, mean, Time, CI(1,:), Time, CI(2,:))
+plot(1:21, result(1,:), Time, result(2,:), Time, result(3,:))
 title('Path of lumber stock')
 xlabel('Time Period')
 ylabel('Stock of Lumber')
-legend('mean', 'lower bound', 'upper bound')
-saveas(gcf,'prob5.png')
-
+legend( 'lower bound', 'mean', 'upper bound')
+saveas(gcf,'prob5_2.png')
 
 %% Problem 6 Tauchen with coarse grid
 
@@ -182,7 +188,7 @@ while diff > 1e-6
         [vrevised(i,:),decision(i,:)] = max( pi + delta*Ev );
         decision;
     end
-    diff = norm(vrevised - vinitial) / norm(vrevised);
+    diff = norm(vrevised - vinitial) / norm(vrevised)
     vinitial = vrevised;
     
 end
@@ -211,44 +217,96 @@ saveas(gcf,'prob6_2.png')
 
 T = 21; % time period
 Time = 1:T;
-sim = 1000; % number of simulation
 
-path_p = zeros(sim,T); 
-path_p(:,1) = 3;
+% Construct transition matrix
+P=zeros(Z*N,Z*N);
 
-% generate the price path (20 period)  1000 times
-for s = 1:1000
-    for i = 2:21
-        rng(s * 2019 + i );
-        pmf = prob(path_p(s,i-1),:);
-        cdf = cumsum(pmf);
-        r = rand;
-        path_p(s,i) = find(cdf>r,1);
+for i=1:Z
+    for j=1:Z
+        P((i-1)*N+1:i*N,(j-1)*N+1:j*N)=prob(i,j)*(kron(ones(1,N),drule(:,i))==kron(ones(N,1),k));
     end
 end
 
-% generate the lumber stock path
-path_k = zeros(sim,T);
-path_k(:,1) = 101; % this is index
-path_stock = zeros(sim,T);
-path_stock(:,1) = 100;
+% transition probability: p=1 and k = 100 (initial)
+pint = zeros(1,N*Z); % 3 is index of p=1
+pint(1,3*101)=1; % since period 1 state is (1,100), mass is 1 on
 
-for s = 1:1000
-    for i = 2:21
-        path_k(s,i) = decision(path_k(s,i-1), path_p(s,i-1));
-        path_stock(s,i) = k(path_k(s,i));
+% Simulate the model
+result = zeros(3,T);
+result(:,1) =[100;100;100];  
+for t=2:21
+    pnext = pint*P; % next period probability (1 x Z*N)
+    
+    probk=zeros(N,Z); % generate probability distribution for stock
+    for i=1:Z
+        probk(:,i) = pnext((i-1)*N+1:i*N)';
     end
+    probk = sum(probk'); % summing over for all price
+    
+    cdf = cumsum(probk); % get cdf
+    
+    lowerind = max(find(cdf<=0.05)); % get 5-percentile index
+    upperind = min(find(cdf>=0.95)); % get 95-percentile index
+    
+    mean = probk*k';
+    
+    LB = k(lowerind); % lower bound
+    UB = k(upperind);
+    
+    result(:,t) = [LB mean UB]; % store result
+    
+    pint = pnext; % update today's distirbution 
 end
 
-mean = mean(path_stock);
-stderr = std(path_stock);   
-ts = tinv([0.05  0.95],length(path_stock-1))';
-
-CI = ones(2,1)*mean + ts*stderr/sqrt(length(path_stock)) ;
-
-plot(Time, mean, Time, CI(1,:), Time, CI(2,:))
+plot(1:21, result(1,:), Time, result(2,:), Time, result(3,:))
 title('Path of lumber stock')
 xlabel('Time Period')
 ylabel('Stock of Lumber')
-legend('mean', 'lower bound', 'upper bound')
-saveas(gcf,'prob6_3.png')
+legend( 'lower bound', 'mean', 'upper bound')
+saveas(gcf,'prob6_3_2.png')
+
+%% 
+
+% T = 21; % time period
+% Time = 1:T;
+% sim = 100; % number of simulation
+% 
+% path_p = zeros(sim,T); 
+% path_p(:,1) = 11;
+% 
+% % generate the price path (20 period)  1000 times
+% for s = 1:sim
+%     for i = 2:21
+%         rng(s * 2019 + i );
+%         pmf = prob(path_p(s,i-1),:);
+%         cdf = cumsum(pmf);
+%         r = rand;
+%         path_p(s,i) = find(cdf>r,1);
+%     end
+% end
+% 
+% % generate the lumber stock path
+% path_k = zeros(sim,T);
+% path_k(:,1) = N; % this is index
+% path_stock = zeros(sim,T);
+% path_stock(:,1) = 100;
+% 
+% for s = 1:sim
+%     for i = 2:21
+%         path_k(s,i) = decision(path_k(s,i-1), path_p(s,i-1));
+%         path_stock(s,i) = k(path_k(s,i));
+%     end
+% end
+% 
+% mean = mean(path_stock);
+% stderr = std(path_stock);   
+% ts = tinv([0.05  0.95],length(path_stock-1))';
+% 
+% CI = ones(2,1)*mean + ts*stderr/sqrt(length(path_stock)) ;
+% 
+% plot(Time, mean, Time, CI(1,:), Time, CI(2,:))
+% title('Path of lumber stock')
+% xlabel('Time Period')
+% ylabel('Stock of Lumber')
+% legend('mean', 'lower bound', 'upper bound')
+% saveas(gcf,'prob5.png')
