@@ -394,7 +394,7 @@ We want to make the stock of lumber as a state variable, so that $x=k-k'$.  Then
 Then we can formulate the firm's problem such that it chooses $k'$ (next period stock) given the state variables $(k,p)$. The Bellman's equation is
 
 \begin{align}
-V(k,p) = \max_{k'}  p \cdot (k-k') - 0.2 \cdot (k-k')^{1.5} + \delta \mathbb{E}_{p'}\lprn{V(k',p')|p}
+V(k,p) = \max_{k'\in[0,k]}  p \cdot (k-k') - 0.2 \cdot (k-k')^{1.5} + \delta \mathbb{E}_{p'}\lprn{V(k',p')|p}
 \end{align}
 
 given initial stock of lumber (between 0 and 100) and transition probability of $p$ which is defined by the AR(1) process ($p'= p_0 + \rho\cdot p + u$). In the Bellman's equation presented in equation (2), expectation is taken over next period price $p'$ given today's price $p$.

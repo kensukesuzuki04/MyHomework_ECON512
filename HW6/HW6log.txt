@@ -1,0 +1,390 @@
+Refer to the PDF
+The dimensions of prob are 21  21
+The dimensions of grid are 1  21
+The dimensions of harvest  are 101   21
+
+diff =
+
+     1
+
+
+diff =
+
+    0.4373
+
+
+diff =
+
+    0.2764
+
+
+diff =
+
+    0.1987
+
+
+diff =
+
+    0.1508
+
+
+diff =
+
+    0.1174
+
+
+diff =
+
+    0.0922
+
+
+diff =
+
+    0.0722
+
+
+diff =
+
+    0.0560
+
+
+diff =
+
+    0.0430
+
+
+diff =
+
+    0.0328
+
+
+diff =
+
+    0.0251
+
+
+diff =
+
+    0.0192
+
+
+diff =
+
+    0.0147
+
+
+diff =
+
+    0.0113
+
+
+diff =
+
+    0.0086
+
+
+diff =
+
+    0.0065
+
+
+diff =
+
+    0.0049
+
+
+diff =
+
+    0.0037
+
+
+diff =
+
+    0.0027
+
+
+diff =
+
+    0.0020
+
+
+diff =
+
+    0.0014
+
+
+diff =
+
+    0.0010
+
+
+diff =
+
+   7.1089e-04
+
+
+diff =
+
+   4.8280e-04
+
+
+diff =
+
+   3.2007e-04
+
+
+diff =
+
+   2.0678e-04
+
+
+diff =
+
+   1.3011e-04
+
+
+diff =
+
+   7.9681e-05
+
+
+diff =
+
+   4.7548e-05
+
+
+diff =
+
+   2.7754e-05
+
+
+diff =
+
+   1.5919e-05
+
+
+diff =
+
+   9.0130e-06
+
+
+diff =
+
+   5.0631e-06
+
+
+diff =
+
+   2.8351e-06
+
+
+diff =
+
+   1.5847e-06
+
+
+diff =
+
+   8.8482e-07
+
+<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW6\HW6.m',153,1)">153 </a>clear prob grid vinitial vrevused decision mean 
+if system_dependent('IsDebugMode')==1, dbcont; end
+The dimensions of prob are 5  5
+The dimensions of grid are 1  5
+The dimensions of harvest  are 101    5
+The dimensions of harvest  are 101    5
+
+diff =
+
+     1
+
+
+diff =
+
+    0.4258
+
+
+diff =
+
+    0.2681
+
+
+diff =
+
+    0.1935
+
+
+diff =
+
+    0.1474
+
+
+diff =
+
+    0.1150
+
+
+diff =
+
+    0.0904
+
+
+diff =
+
+    0.0709
+
+
+diff =
+
+    0.0552
+
+
+diff =
+
+    0.0426
+
+
+diff =
+
+    0.0327
+
+
+diff =
+
+    0.0251
+
+
+diff =
+
+    0.0193
+
+
+diff =
+
+    0.0149
+
+
+diff =
+
+    0.0114
+
+
+diff =
+
+    0.0087
+
+
+diff =
+
+    0.0067
+
+
+diff =
+
+    0.0051
+
+
+diff =
+
+    0.0038
+
+
+diff =
+
+    0.0029
+
+
+diff =
+
+    0.0021
+
+
+diff =
+
+    0.0016
+
+
+diff =
+
+    0.0011
+
+
+diff =
+
+   7.9271e-04
+
+
+diff =
+
+   5.5166e-04
+
+
+diff =
+
+   3.7670e-04
+
+
+diff =
+
+   2.5230e-04
+
+
+diff =
+
+   1.6571e-04
+
+
+diff =
+
+   1.0682e-04
+
+
+diff =
+
+   6.7657e-05
+
+
+diff =
+
+   4.2186e-05
+
+
+diff =
+
+   2.5985e-05
+
+
+diff =
+
+   1.5861e-05
+
+
+diff =
+
+   9.6158e-06
+
+
+diff =
+
+   5.8005e-06
+
+
+diff =
+
+   3.4856e-06
+
+
+diff =
+
+   2.0874e-06
+
+
+diff =
+
+   1.2454e-06
+
+
+diff =
+
+   7.3975e-07
+

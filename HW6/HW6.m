@@ -6,6 +6,11 @@
 
 clear all;
 
+clear all
+delete HW6log.txt
+diary('HW6log.txt')
+diary on
+
 %% Basic setup
 delta = 0.95;
 p0 = 0.5;
@@ -264,6 +269,8 @@ xlabel('Time Period')
 ylabel('Stock of Lumber')
 legend( 'lower bound', 'mean', 'upper bound')
 saveas(gcf,'prob6_3_2.png')
+
+diary off
 
 %% 
 
