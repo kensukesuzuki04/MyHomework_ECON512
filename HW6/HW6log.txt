@@ -187,8 +187,6 @@ diff =
 
    8.8482e-07
 
-<a href="matlab: opentoline('C:\Users\KensukeSuzuki\Box Sync\2018\03 Fall\ECON512Emp\MyHomework_ECON512\HW6\HW6.m',153,1)">153 </a>clear prob grid vinitial vrevused decision mean 
-if system_dependent('IsDebugMode')==1, dbcont; end
 The dimensions of prob are 5  5
 The dimensions of grid are 1  5
 The dimensions of harvest  are 101    5

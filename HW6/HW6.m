@@ -4,6 +4,8 @@
 % Kensuke Suzuki
 % kxs974@psu.edu
 
+% All looks good, check plus
+
 clear all;
 
 clear all
