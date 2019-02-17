@@ -485,7 +485,7 @@ D_2 \ \ &\text{if} \ \ \ q_1=0,\ q_2=1
 
 Since I know $\Pr(\omega_1' |\omega_1,q_1)$, $\Pr(\omega_2' |\omega_2,q_2)$, and $\Pr(q_1,q_2 |\omega_1,\omega_2)$, we can construct $\vect{Trans}$ using the price matrix obtained in problem 1.
 
-Let the state vector be $\vect{s}\in\mathbb{R}^{900}$  where each element corresponds to unique pair of $(\omega_1,\omega_2)$. For example, the first element is $(\omega_1^1,\omega_2^1)$, the second element is  $(\omega_1^1,\omega_2^L)$, and the last element is  $(\omega_1^L,\omega_2^L)$. Since the initial state is (1,1), let $\vect{s}^1 = [1,0,\cdots,0]^\top$. The probability distribution in period 2 is
+Let the state vector be $\vect{s}\in\mathbb{R}^{1\times900}$  where each element corresponds to unique pair of $(\omega_1,\omega_2)$. For example, the first element is $(\omega_1^1,\omega_2^1)$, the second element is  $(\omega_1^1,\omega_2^L)$, and the last element is  $(\omega_1^L,\omega_2^L)$. Since the initial state is (1,1), let $\vect{s}^1 = [1,0,\cdots,0]$. The probability distribution in period 2 is
 
 \begin{align*}
 \vect{s}^2 = \vect{\rho}\vect{s}^1
@@ -494,7 +494,7 @@ Let the state vector be $\vect{s}\in\mathbb{R}^{900}$  where each element corres
 We can repeat this to get the probability distribution over state in period $t$ as
 
 \begin{align*}
-\vect{s}^t = \vect{\rho}\vect{s}^{t-1}
+\vect{s}^t =\vect{\rho} \vect{s}^{t-1}
 \end{align*}
 
 Following images demonstrate the probability distribution after 10, 20, and 30 periods.

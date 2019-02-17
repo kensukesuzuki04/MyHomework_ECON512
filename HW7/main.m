@@ -8,10 +8,13 @@ setupParams;
 cmat = kron(c, ones(1,L));
 p1 = (repmat(c,1,L) + v)./2;
 V1 = (p1 - cmat)./(1-beta);
-V1 = ones(L,L);
 
 diff = 1;
 iter=1;
+
+load solution.mat 
+p1 = solution.price;
+V1 = solution.value;
 
 while diff > 1e-5 && iter < 100000;
       
@@ -33,14 +36,20 @@ while diff > 1e-5 && iter < 100000;
     
 end
 
+ solution.price = p1;
+ solution.value = V1;
+ save solution;
+ 
+
 figure(1);
 mesh(V1);
 title('Value Function');
+saveas(gcf,'value.png')
 
 figure(2);
 mesh(p1);
 title('Price');
-
+saveas(gcf,'price.png')
 
 %% Problem 2
 % transition matrix
@@ -88,16 +97,19 @@ for i = 1:L*L
     end
 end
 
+
+
 clear state state_new
 
+
 % initial state
-state_int = zeros(L*L,1);
+state_int = zeros(1,L*L);
 state_int(1,1) = 1;
 
 % 10 period
 state = state_int;
 for t = 2:10
-    state_new = Trans * state;
+    state_new =   state * Trans;
     state = state_new;
 end
 
@@ -109,7 +121,7 @@ end
 % 20 period
 state = state_int;
 for t = 2:20
-    state_new = Trans * state;
+    state_new = state * Trans;
     state = state_new;
 end
 
@@ -121,7 +133,7 @@ end
 % 30 period
 state = state_int;
 for t = 2:30
-    state_new = Trans * state;
+    state_new = state * Trans;
     state = state_new;
 end
 
@@ -133,14 +145,17 @@ end
 figure(3);
 mesh(Dstrbn10);
 title('Distribution after 10 periods');
+saveas(gcf,'10period.png')
 
 figure(4);
 mesh(Dstrbn20);
 title('Distribution after 20 periods');
+saveas(gcf,'20period.png')
 
 figure(5);
 mesh(Dstrbn30);
 title('Distribution after 30 periods');
+saveas(gcf,'30period.png')
 
 %% Problem 3
 % stationary distribution
@@ -148,7 +163,7 @@ title('Distribution after 30 periods');
 state = state_int;
 diff = 1;
 while diff > 1e-6
-    state_new = Trans * state;
+    state_new = state * Trans;
     diff = max(abs(state - state_new))
     state = state_new;
 end
@@ -161,3 +176,4 @@ end
 figure(6);
 mesh(StDstrbn);
 title('Stationary Distribution');
+saveas(gcf,'stationary.png')
