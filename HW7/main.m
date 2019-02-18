@@ -1,3 +1,13 @@
+% Spring 2019
+% ECON512 Empirical Method
+% Homework 7 --- Dynamic Game
+% Kensuke Suzuki
+% kxs974@psu.edu
+
+delete HW7log.txt
+diary('HW7log.txt')
+diary on
+
 clear;
 tic;
 setupParams;
@@ -12,24 +22,31 @@ V1 = (p1 - cmat)./(1-beta);
 diff = 1;
 iter=1;
 
-load solution.mat 
-p1 = solution.price;
-V1 = solution.value;
+% solution.mat contains the policy and value function which is solved
+% through the algorithm below
+% in order to reduce time of computation, I store the result and call it
+%load solution.mat   
+%p1 = solution.price;
+%V1 = solution.value;
 
 while diff > 1e-5 && iter < 100000;
-      
+    
+    % get W
     W = getW(V1);
 
+    % solve for p using fsolves
     psol = @(p) focp(p,W);
     p1_new = fsolve(psol, p1);
     
+    % get value function
     V1_new = getV(p1,p1_new,W);
     
+    % compute difference
     diff_p = max( abs(((p1_new - p1)./(1+abs(p1_new)))) );
     diff_V = max( abs(((V1_new - V1)./(1+abs(V1_new)))) );
     diff = max([diff_p,diff_V])
     
-    
+    % update value and policy functions
     V1 = lambda .* V1_new + (1-lambda).* V1;
     p1 = lambda .* p1_new + (1-lambda).* p1;
     iter = iter +1
@@ -177,3 +194,5 @@ figure(6);
 mesh(StDstrbn);
 title('Stationary Distribution');
 saveas(gcf,'stationary.png')
+
+diary off

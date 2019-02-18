@@ -19,7 +19,7 @@ v = 10;
 beta = 1/1.05;
 
 CRIT = 1e-10; %10^(-6);
-lambda = 1; %.75; %For Dampening
+lambda = 0.9; %.75; %For Dampening
 
 Omega = (1:1:30)';
 %Omega = omega';
