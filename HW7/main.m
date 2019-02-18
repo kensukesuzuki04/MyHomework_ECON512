@@ -24,10 +24,11 @@ iter=1;
 
 % solution.mat contains the policy and value function which is solved
 % through the algorithm below
-% in order to reduce time of computation, I store the result and call it
-%load solution.mat   
-%p1 = solution.price;
-%V1 = solution.value;
+% in order to reduce time of computation for each run, 
+% I store the result and call it (you may comment out three lines below)
+load solution.mat   
+p1 = solution.price;
+V1 = solution.value;
 
 while diff > 1e-5 && iter < 100000;
     
