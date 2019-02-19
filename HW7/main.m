@@ -3,6 +3,7 @@
 % Homework 7 --- Dynamic Game
 % Kensuke Suzuki
 % kxs974@psu.edu
+% all is good, check plus
 
 delete HW7log.txt
 diary('HW7log.txt')
